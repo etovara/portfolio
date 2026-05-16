@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "about": "Sobre m\u00ED",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "cta_projects": "Ver mi trabajo",
+    "cta_contact": "Cont\u00E1ctame"
+  },
+  "about": {
+    "heading": "Sobre M\u00ED"
+  },
+  "experience": {
+    "heading": "Experiencia"
+  },
+  "projects": {
+    "heading": "Proyectos",
+    "live": "Sitio",
+    "source": "C\u00F3digo"
+  },
+  "contact": {
+    "heading": "Contacto",
+    "subtitle": "\u00BFTienes un proyecto en mente? Env\u00EDame un mensaje y te responder\u00E9 a la brevedad.",
+    "label_name": "Nombre",
+    "label_email": "Email",
+    "label_message": "Mensaje",
+    "submit": "Enviar mensaje",
+    "or_email": "O env\u00EDame un correo directamente a",
+    "success": "\u00A1Gracias por tu mensaje! Te responder\u00E9 pronto."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "back_to_top": "Volver arriba"
+  },
+  "lang": {
+    "switch": "Cambiar idioma a ingl\u00E9s",
+    "current": "Espa\u00F1ol"
+  }
+}

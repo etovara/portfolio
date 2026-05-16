@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "cta_projects": "View my work",
+    "cta_contact": "Get in touch"
+  },
+  "about": {
+    "heading": "About Me"
+  },
+  "experience": {
+    "heading": "Experience"
+  },
+  "projects": {
+    "heading": "Projects",
+    "live": "Live",
+    "source": "Source"
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subtitle": "Have a project in mind? Send me a message and I'll get back to you.",
+    "label_name": "Name",
+    "label_email": "Email",
+    "label_message": "Message",
+    "submit": "Send Message",
+    "or_email": "Or email me directly at",
+    "success": "Thanks for your message! I'll get back to you soon."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "back_to_top": "Back to top"
+  },
+  "lang": {
+    "switch": "Switch language to Spanish",
+    "current": "English"
+  }
+}

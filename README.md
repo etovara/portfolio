@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio - Edwin Tovar | QA Engineer
 
-## Getting Started
+## Resumen del proyecto
 
-First, run the development server:
+SPA desarrollada con Next.js 16 + TypeScript + Tailwind CSS. Portfolio personal tipo landing page con las secciones: Hero, About, Experience, Projects, Contact y Footer.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Stack
+
+- **Framework:** Next.js 16 (App Router, SSG)
+- **Lenguaje:** TypeScript
+- **Estilos:** Tailwind CSS v4
+- **Fuentes:** Geist (Sans & Mono)
+- **Testing (E2E):** Playwright (atributos `data-testid` en todos los elementos interactivos)
+
+## Arquitectura
+
+```
+src/
+├── app/
+│   ├── globals.css        # Estilos globales + Tailwind
+│   ├── layout.tsx         # Layout root + LanguageProvider
+│   └── page.tsx           # Home: compone todos los m\u00f3dulos
+├── components/
+│   ├── Header.tsx         # Nav fija, men\u00fa responsive, bot\u00f3n ES/EN
+│   ├── Hero.tsx           # Presentaci\u00f3n + redes sociales
+│   ├── About.tsx          # Bio + ubicaci\u00f3n
+│   ├── Experience.tsx     # Timeline de experiencia laboral
+│   ├── Projects.tsx       # Grid de proyectos con enlaces
+│   ├── Contact.tsx        # Formulario de contacto
+│   └── Footer.tsx         # Copyright + navegaci\u00f3n
+├── data/
+│   └── data.json          # Datos del CV (personal, experience, projects)
+├── i18n/
+│   ├── es.json            # Traducciones UI en espa\u00f1ol
+│   ├── en.json            # Traducciones UI en ingl\u00e9s
+│   ├── LanguageContext.tsx # Contexto + Provider + hook useLanguage
+│   └── index.ts           # Re-exportaciones
+└── types/
+    └── index.ts           # Interfaces TypeScript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Caracter\u00edsticas implementadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Arquitectura basada en componentes** - 7 componentes at\u00f3micos con props tipadas
+2. **Data-driven** - Datos consumidos desde `data.json` (no hardcodeados)
+3. **data-testid** - Todos los elementos interactivos tienen atributos para E2E
+4. **Responsive** - Men\u00fa mobile con hamburger toggle, grid 1/2 columnas
+5. **Accesibilidad** - Roles ARIA, aria-label, aria-expanded, aria-required
+6. **Dark mode** - Soporte completo via `prefers-color-scheme`
+7. **i18n** - Traducciones ES/EN para toda la UI con contexto React
+8. **Header** - Fondo blanco s\u00f3lido con textos oscuros para diferenciarse
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Datos del CV
 
-## Learn More
+Los datos corresponden a **Edwin Tovar**, QA Engineer con +10 a\u00f1os de experiencia en Fintech, Banca y Medios de Pago.
 
-To learn more about Next.js, take a look at the following resources:
+### Experiencia
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Empresa | Rol | Per\u00edodo |
+|---------|-----|-----------|
+| SOFI | Senior QA Engineer | 2023 \u2014 Presente |
+| Banco ICBC / IT Patagonia | QA Tester Agile | 2022 |
+| Prisma Medios de Pagos | Business Analyst III | 2021 \u2014 2022 |
+| Banco Galicia / Voolkia | Functional Analyst / Senior QA Tester | 2019 \u2014 2021 |
+| Banesco Banco Universal | Functional Analyst / QA Tester | 2012 \u2014 2018 |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Proyectos destacados
 
-## Deploy on Vercel
+- AI-Driven Test Automation Suite
+- Fintech QA Platform
+- Accessibility Testing Framework
+- Corporate Home Banking Testing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## C\u00f3mo ejecutar
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+cd portfolio
+npm run dev      # Desarrollo en http://localhost:3000
+npm run build    # Build de producci\u00f3n
+npm start        # Servir build de producci\u00f3n
+```
+
+## Comandos \u00fatiles
+
+- `npm run lint` - Ejecutar ESLint
+- `npx playwright-cli open http://localhost:3000` - Abrir navegador para testing E2E

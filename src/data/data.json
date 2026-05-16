@@ -1,0 +1,96 @@
+{
+  "personal": {
+    "name": "Edwin Tovar",
+    "role": "QA Engineer | Manual & Automation Testing | AI-Driven QA",
+    "tagline": "10+ years ensuring quality across Fintech, Banking, and Payment platforms",
+    "bio": "Computer Engineer and Senior QA Engineer with over 10 years of experience in Quality Assurance across Fintech, Banking, and Payment Media environments. Specialized in the full end-to-end testing cycle, from requirements analysis to execution, automation, and reporting. Hands-on experience in automated testing and in implementing Artificial Intelligence solutions applied to QA, optimizing script generation and maintenance, automated visual validation, and predictive defect analysis. Focused on continuous improvement, process efficiency, and delivering high-quality products in Agile environments (Scrum).",
+    "avatar": "/avatar.jpg",
+    "location": "Buenos Aires, Argentina",
+    "email": "edwintovaraladejo@gmail.com",
+    "social": {
+      "github": "",
+      "linkedin": "https://linkedin.com/in/edwintovar",
+      "twitter": ""
+    }
+  },
+  "experience": [
+    {
+      "id": "exp-1",
+      "company": "SOFI",
+      "role": "Senior QA Engineer",
+      "period": "2023 \u2014 Present",
+      "description": "Plan and execute manual and automated testing for Fintech platforms. Implement AI-driven testing solutions including Testim.io, Mabl, and Applitools Eyes. Integrate testing suites into CI/CD pipelines for automated executions during each build and deployment. Perform API testing with Postman, cloud testing in AWS Lambda, and accessibility testing with NVDA and VoiceOver.",
+      "technologies": ["Selenium", "Testim.io", "Mabl", "Applitools Eyes", "Postman", "AWS Lambda", "MongoDB", "Bitbucket"]
+    },
+    {
+      "id": "exp-2",
+      "company": "Banco ICBC / IT Patagonia",
+      "role": "QA Tester Agile",
+      "period": "2022",
+      "description": "Executed functional tests (Front-end, Back-end, API, Web Services). Designed and executed test cases for Corporate Home Banking. Used HP ALM, Postman, Insomnia, and Xray. Reported and tracked defects in Jira and Confluence.",
+      "technologies": ["HP ALM", "Postman", "Insomnia", "Xray", "Jira", "Confluence"]
+    },
+    {
+      "id": "exp-3",
+      "company": "Prisma Medios de Pagos",
+      "role": "Business Analyst III",
+      "period": "2021 \u2014 2022",
+      "description": "Designed and executed functional and non-functional tests. Tested REST and XML services. Supported project coordination with Visa, MasterCard, and American Express. Generated test data and functional documentation.",
+      "technologies": ["REST", "XML", "SoapUI", "Postman"]
+    },
+    {
+      "id": "exp-4",
+      "company": "Banco Galicia / Voolkia Software",
+      "role": "Functional Analyst / Senior QA Tester",
+      "period": "2019 \u2014 2021",
+      "description": "Gathered, analyzed, and designed adaptive and corrective requirements. Coordinated with Product Managers and Stakeholders. Executed manual testing and managed incident tracking.",
+      "technologies": ["Jira", "Confluence", "TestRail", "Selenium"]
+    },
+    {
+      "id": "exp-5",
+      "company": "Banesco Banco Universal",
+      "role": "Functional Analyst / QA Tester",
+      "period": "2012 \u2014 2018",
+      "description": "Designed and executed functional test cases (Smoke, Exploratory, Regression). Created test plans and estimates. Detected and documented defects in Jira.",
+      "technologies": ["Jira", "HP ALM", "SQL"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "AI-Driven Test Automation Suite",
+      "description": "Implemented AI-powered testing solutions using Testim.io and Mabl for intelligent script creation and maintenance, reducing manual effort and improving test suite maintainability.",
+      "technologies": ["Testim.io", "Mabl", "Applitools Eyes", "ChatGPT", "Selenium"],
+      "url": "",
+      "github": "",
+      "image": "/projects/ai-testing.jpg"
+    },
+    {
+      "id": "proj-2",
+      "title": "Fintech QA Platform",
+      "description": "Planned and executed comprehensive manual and automated testing for Fintech platforms, integrating suites into CI/CD pipelines with Bitbucket for automated executions during builds and deployments.",
+      "technologies": ["Selenium", "Postman", "AWS Lambda", "MongoDB", "Bitbucket CI/CD"],
+      "url": "",
+      "github": "",
+      "image": "/projects/fintech-qa.jpg"
+    },
+    {
+      "id": "proj-3",
+      "title": "Accessibility Testing Framework",
+      "description": "Executed accessibility testing across web and mobile platforms using NVDA, VoiceOver, and TalkBack, ensuring WCAG compliance for banking applications.",
+      "technologies": ["NVDA", "VoiceOver", "TalkBack", "BrowserStack", "Charles Proxy"],
+      "url": "",
+      "github": "",
+      "image": "/projects/a11y-testing.jpg"
+    },
+    {
+      "id": "proj-4",
+      "title": "Corporate Home Banking Testing",
+      "description": "Designed and executed functional test cases for Corporate Home Banking platforms, covering front-end, back-end, API, and web services with comprehensive defect tracking.",
+      "technologies": ["HP ALM", "Postman", "Insomnia", "Xray", "Jira"],
+      "url": "",
+      "github": "",
+      "image": "/projects/homebanking.jpg"
+    }
+  ]
+}
