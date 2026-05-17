@@ -6,35 +6,34 @@
 testing/
 ├── TEST_SCENARIOS.md          ← Este documento
 ├── test-plan.md               ← Plan de pruebas general
+├── automation/                ← Pruebas automatizadas (Playwright)
+│   ├── pages/                 ← Page Objects (POM)
+│   │   ├── BasePage.ts        ← Clase base con métodos comunes
+│   │   ├── HomePage.ts        ← Navegación y header
+│   │   ├── HeroSection.ts     ← Sección de presentación
+│   │   ├── AboutSection.ts    ← Sección "Sobre mí"
+│   │   ├── ExperienceSection.ts ← Línea de tiempo
+│   │   ├── ProjectsSection.ts ← Grilla de proyectos
+│   │   ├── ContactSection.ts  ← Formulario de contacto
+│   │   ├── FooterSection.ts   ← Pie de página
+│   │   └── index.ts           ← Barrel exports
+│   ├── specs/                 ← Tests automatizados
+│   │   ├── navigation.spec.ts ← Tests de navegación (5)
+│   │   ├── hero.spec.ts       ← Tests del hero (5)
+│   │   ├── about.spec.ts      ← Tests del about (3)
+│   │   ├── experience.spec.ts ← Tests de experiencia (3)
+│   │   ├── projects.spec.ts   ← Tests de proyectos (3)
+│   │   ├── contact.spec.ts    ← Tests de contacto (5)
+│   │   ├── footer.spec.ts     ← Tests del footer (2)
+│   │   ├── i18n.spec.ts       ← Tests de idioma (4)
+│   │   └── api.spec.ts        ← Tests de HTTP/API (7)
+│   ├── fixtures/
+│   │   └── test-data.ts       ← Datos de prueba centralizados
+│   └── playwright.config.ts   ← Configuración de Playwright
 └── manual/
     ├── smoke-tests.md         ← Smoke tests manuales
     ├── regression-tests.md    ← Pruebas de regresión manuales
     └── exploratory-checklist.md ← Checklist de exploración
-
-e2e/
-├── pages/                     ← Page Objects (POM)
-│   ├── BasePage.ts            ← Clase base con métodos comunes
-│   ├── HomePage.ts            ← Navegación y header
-│   ├── HeroSection.ts         ← Sección de presentación
-│   ├── AboutSection.ts        ← Sección "Sobre mí"
-│   ├── ExperienceSection.ts   ← Línea de tiempo
-│   ├── ProjectsSection.ts     ← Grilla de proyectos
-│   ├── ContactSection.ts      ← Formulario de contacto
-│   ├── FooterSection.ts       ← Pie de página
-│   └── index.ts               ← Barrel exports
-├── specs/                     ← Tests automatizados
-│   ├── navigation.spec.ts     ← Tests de navegación (5)
-│   ├── hero.spec.ts           ← Tests del hero (5)
-│   ├── about.spec.ts          ← Tests del about (3)
-│   ├── experience.spec.ts     ← Tests de experiencia (3)
-│   ├── projects.spec.ts       ← Tests de proyectos (3)
-│   ├── contact.spec.ts        ← Tests de contacto (5)
-│   ├── footer.spec.ts         ← Tests del footer (2)
-│   ├── i18n.spec.ts           ← Tests de idioma (4)
-│   └── api.spec.ts            ← Tests de API/Rendimiento (7)
-├── fixtures/
-│   └── test-data.ts           ← Datos de prueba centralizados
-└── playwright.config.ts       ← Configuración de Playwright
 ```
 
 ---
@@ -197,8 +196,8 @@ npm run test:e2e:ui
 # Modo debug (paso a paso)
 npm run test:e2e:debug
 
-# Tests específicos
-npx playwright test e2e/specs/i18n.spec.ts
+# Tests específicos (ruta relativa a automation/)
+npx playwright test specs/i18n.spec.ts -c testing/automation/playwright.config.ts
 
 # Reporte HTML (se genera automáticamente en /playwright-report)
 npx playwright show-report

@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui",
-    "test:e2e:debug": "playwright test --debug"
+    "test:e2e": "playwright test -c testing/automation/playwright.config.ts",
+    "test:e2e:ui": "playwright test -c testing/automation/playwright.config.ts --ui",
+    "test:e2e:debug": "playwright test -c testing/automation/playwright.config.ts --debug"
   },
   "dependencies": {
     "next": "16.2.6",
