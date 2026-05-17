@@ -93,7 +93,7 @@ Herramientas adicionales:
 Empresa:               SOFI
 Industria:             Fintech
 Rol:                   Senior QA Engineer
-Período:               2023 — Presente
+Período:               2023 — Abril 2026
 Tipo de contratación:  [[  ]]
 Modalidad:             [[  ]]
 

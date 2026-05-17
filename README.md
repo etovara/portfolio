@@ -59,7 +59,7 @@ Los datos corresponden a **Edwin Tovar**, Senior QA Engineer especializado en as
 
 | Empresa | Rol | Per\u00edodo |
 |---------|-----|-----------|
-| SOFI | Senior QA Engineer | 2023 \u2014 Presente |
+| SOFI | Senior QA Engineer | 2023 \u2014 Abril 2026 |
 | Banco ICBC / IT Patagonia | QA Tester Agile | 2022 |
 | Prisma Medios de Pagos | Business Analyst III | 2021 \u2014 2022 |
 | Banco Galicia / Voolkia | Functional Analyst / Senior QA Tester | 2019 \u2014 2021 |

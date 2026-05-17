@@ -118,7 +118,7 @@ portfolio/
 ### Experiencia (5 entradas)
 | Empresa | Rol | Período |
 |---|---|---|
-| SOFI | Senior QA Engineer | 2023 — Presente |
+| SOFI | Senior QA Engineer | 2023 — Abril 2026 |
 | Banco ICBC / IT Patagonia | QA Tester Agile | 2022 |
 | Prisma Medios de Pagos | Business Analyst III | 2021 — 2022 |
 | Banco Galicia / Voolkia Software | Functional Analyst / Senior QA Tester | 2019 — 2021 |
