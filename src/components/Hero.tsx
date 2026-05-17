@@ -42,7 +42,7 @@ export default function Hero({ personal }: HeroProps) {
         >
           {resolveText(personal.tagline, lang)}
         </p>
-        {/* Botones de llamada a la acción: Ver proyectos y Contactar */}
+        {/* Botones de llamada a la acción: Ver proyectos, Contactar y Descargar CV */}
         <div className="flex items-center justify-center gap-4">
           <a
             href="#projects"
@@ -57,6 +57,14 @@ export default function Hero({ personal }: HeroProps) {
             data-testid="hero-cta-contact"
           >
             {t.hero.cta_contact}
+          </a>
+          <a
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/cv/Edwin_Tovar_CV_Professional_${lang.toUpperCase()}.pdf`}
+            download
+            className="rounded-full border border-emerald-300 bg-emerald-50 px-6 py-3 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-100 dark:border-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 dark:hover:bg-emerald-900"
+            data-testid="hero-cta-cv"
+          >
+            {t.hero.cta_cv}
           </a>
         </div>
       </div>
