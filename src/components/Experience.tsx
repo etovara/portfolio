@@ -1,6 +1,10 @@
 "use client";
 
+/* === COMPONENTE EXPERIENCE (LÍNEA DE TIEMPO) === */
+/* Renderiza la experiencia laboral como una línea de tiempo vertical con roles, empresas, períodos y tecnologías */
+
 import { useLanguage } from "@/i18n";
+import { resolveText } from "@/utils/lang";
 import type { Experience as ExperienceType } from "@/types";
 
 interface ExperienceProps {
@@ -8,7 +12,7 @@ interface ExperienceProps {
 }
 
 export default function Experience({ experience }: ExperienceProps) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <section
@@ -22,7 +26,9 @@ export default function Experience({ experience }: ExperienceProps) {
       >
         {t.experience.heading}
       </h2>
+      {/* Contenedor relativo para la línea vertical de la timeline */}
       <div className="relative space-y-10">
+        {/* Línea vertical decorativa que conecta todos los items */}
         <div
           className="absolute left-[7px] top-2 h-[calc(100%-1rem)] w-px bg-zinc-200 dark:bg-zinc-800"
           aria-hidden="true"
@@ -33,16 +39,18 @@ export default function Experience({ experience }: ExperienceProps) {
             className="relative pl-8"
             data-testid={`experience-item-${exp.id}`}
           >
+            {/* Punto circular en la línea de tiempo */}
             <div
               className="absolute left-0 top-1.5 h-3.5 w-3.5 rounded-full border-2 border-zinc-300 bg-white dark:border-zinc-600 dark:bg-black"
               aria-hidden="true"
             />
+            {/* Cabecera: rol y período lado a lado en escritorio */}
             <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
               <h3
                 className="text-base font-semibold text-zinc-900 dark:text-zinc-100"
                 data-testid={`experience-role-${exp.id}`}
               >
-                {exp.role}
+                {resolveText(exp.role, lang)}
               </h3>
               <span
                 className="text-sm text-zinc-500 dark:text-zinc-500"
@@ -51,18 +59,21 @@ export default function Experience({ experience }: ExperienceProps) {
                 {exp.period}
               </span>
             </div>
+            {/* Nombre de la empresa */}
             <p
               className="mt-1 text-sm font-medium text-zinc-600 dark:text-zinc-400"
               data-testid={`experience-company-${exp.id}`}
             >
               {exp.company}
             </p>
+            {/* Descripción del rol */}
             <p
               className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400"
               data-testid={`experience-description-${exp.id}`}
             >
-              {exp.description}
+                {resolveText(exp.description, lang)}
             </p>
+            {/* Tags de tecnologías utilizadas */}
             <div className="mt-3 flex flex-wrap gap-2">
               {exp.technologies.map((tech) => (
                 <span

@@ -1,6 +1,10 @@
 "use client";
 
+/* === COMPONENTE ABOUT (ACERCA DE) === */
+/* Muestra la biografía profesional y la ubicación geográfica del autor */
+
 import { useLanguage } from "@/i18n";
+import { resolveText } from "@/utils/lang";
 import type { Personal } from "@/types";
 
 interface AboutProps {
@@ -8,7 +12,7 @@ interface AboutProps {
 }
 
 export default function About({ personal }: AboutProps) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <section
@@ -16,18 +20,21 @@ export default function About({ personal }: AboutProps) {
       className="mx-auto max-w-3xl px-6 py-24"
       aria-label={t.about.heading}
     >
+      {/* Encabezado traducido: "About Me" / "Sobre Mí" */}
       <h2
         className="mb-8 text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100"
         data-testid="about-heading"
       >
         {t.about.heading}
       </h2>
+      {/* Biografía profesional extraída de data.json */}
       <p
         className="text-base leading-relaxed text-zinc-600 dark:text-zinc-400"
         data-testid="about-bio"
       >
-        {personal.bio}
+        {resolveText(personal.bio, lang)}
       </p>
+      {/* Ubicación con ícono de mapa */}
       <div className="mt-6 flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-500">
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />

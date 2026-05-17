@@ -1,5 +1,8 @@
 "use client";
 
+/* === COMPONENTE FOOTER (PIE DE PÁGINA) === */
+/* Muestra el copyright con el año dinámico y un enlace para volver al inicio */
+
 import { useLanguage } from "@/i18n";
 
 interface FooterProps {
@@ -15,13 +18,15 @@ export default function Footer({ name }: FooterProps) {
       role="contentinfo"
     >
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+        {/* Copyright: año actual + nombre + "Todos los derechos reservados" traducido */}
         <p
           className="text-sm text-zinc-500 dark:text-zinc-500"
           data-testid="footer-copyright"
         >
           &copy; {new Date().getFullYear()} {name}. {t.footer.rights}
         </p>
-        <nav aria-label={lang === "es" ? "Navegaci\u00F3n del pie" : "Footer navigation"}>
+        {/* Navegación secundaria: volver al inicio */}
+        <nav aria-label={lang === "es" ? "Navegación del pie" : "Footer navigation"}>
           <ul className="flex items-center gap-6">
             <li>
               <a

@@ -1,6 +1,10 @@
 "use client";
 
+/* === COMPONENTE HERO (PRESENTACIÓN) === */
+/* Sección principal de presentación: rol, nombre, tagline, botones CTA y enlaces a redes sociales */
+
 import { useLanguage } from "@/i18n";
+import { resolveText } from "@/utils/lang";
 import type { Personal } from "@/types";
 
 interface HeroProps {
@@ -14,27 +18,31 @@ export default function Hero({ personal }: HeroProps) {
     <section
       id="hero"
       className="flex min-h-screen flex-col items-center justify-center px-6 pt-16"
-      aria-label={lang === "es" ? "Secci\u00F3n principal" : "Hero section"}
+      aria-label={lang === "es" ? "Sección principal" : "Hero section"}
     >
       <div className="text-center">
+        {/* Rol profesional en mayúsculas y espaciado amplio */}
         <p
           className="mb-4 text-sm font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400"
           data-testid="hero-role"
         >
-          {personal.role}
+          {resolveText(personal.role, lang)}
         </p>
+        {/* Nombre completo como encabezado principal */}
         <h1
           className="mb-6 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl md:text-6xl dark:text-zinc-100"
           data-testid="hero-name"
         >
           {personal.name}
         </h1>
+        {/* Tagline o frase descriptiva */}
         <p
           className="mx-auto mb-8 max-w-lg text-lg text-zinc-600 dark:text-zinc-400"
           data-testid="hero-tagline"
         >
-          {personal.tagline}
+          {resolveText(personal.tagline, lang)}
         </p>
+        {/* Botones de llamada a la acción: Ver proyectos y Contactar */}
         <div className="flex items-center justify-center gap-4">
           <a
             href="#projects"
@@ -53,6 +61,7 @@ export default function Hero({ personal }: HeroProps) {
         </div>
       </div>
 
+      {/* Redes sociales: se renderizan condicionalmente si la URL existe */}
       <div className="mt-16 flex items-center gap-6">
         {personal.social.github && (
           <a

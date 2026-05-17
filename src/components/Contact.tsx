@@ -1,5 +1,8 @@
 "use client";
 
+/* === COMPONENTE CONTACT (FORMULARIO DE CONTACTO) === */
+/* Formulario con campos de nombre, email y mensaje. Muestra mensaje de éxito al enviar y fallback con mailto */
+
 import { useState } from "react";
 import { useLanguage } from "@/i18n";
 
@@ -8,9 +11,11 @@ interface ContactProps {
 }
 
 export default function Contact({ email }: ContactProps) {
+  /* Estado local: indica si el formulario ya fue enviado para mostrar el mensaje de éxito */
   const [submitted, setSubmitted] = useState(false);
   const { t, lang } = useLanguage();
 
+  /* Manejador de envío: previene la recarga y activa el estado de "enviado" */
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
@@ -33,6 +38,7 @@ export default function Contact({ email }: ContactProps) {
       </p>
 
       {submitted ? (
+        /* Mensaje de éxito verde mostrado después del envío */
         <div
           className="rounded-lg border border-green-200 bg-green-50 px-6 py-4 text-sm text-green-800 dark:border-green-800 dark:bg-green-950 dark:text-green-200"
           role="alert"
@@ -46,6 +52,7 @@ export default function Contact({ email }: ContactProps) {
           className="space-y-5"
           data-testid="contact-form"
         >
+          {/* Campo: Nombre */}
           <div>
             <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-zinc-700 dark:text-zinc-300">
               {t.contact.label_name}
@@ -59,6 +66,7 @@ export default function Contact({ email }: ContactProps) {
               aria-required="true"
             />
           </div>
+          {/* Campo: Email */}
           <div>
             <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-zinc-700 dark:text-zinc-300">
               {t.contact.label_email}
@@ -72,6 +80,7 @@ export default function Contact({ email }: ContactProps) {
               aria-required="true"
             />
           </div>
+          {/* Campo: Mensaje */}
           <div>
             <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-zinc-700 dark:text-zinc-300">
               {t.contact.label_message}
@@ -85,6 +94,7 @@ export default function Contact({ email }: ContactProps) {
               aria-required="true"
             />
           </div>
+          {/* Botón de envío */}
           <button
             type="submit"
             className="rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
@@ -92,6 +102,7 @@ export default function Contact({ email }: ContactProps) {
           >
             {t.contact.submit}
           </button>
+          {/* Fallback: enlace directo por correo electrónico */}
           <p className="text-xs text-zinc-500 dark:text-zinc-500">
             {t.contact.or_email}{" "}
             <a
