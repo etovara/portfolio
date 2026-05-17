@@ -19,7 +19,7 @@ export const EXPECTED_ES = {
     projects: "Proyectos",
     contact: "Contacto",
   },
-  bioKeywords: ["más de 10 años", "Ingeniero Informático", "Fintech"],
+  bioKeywords: ["Senior QA Engineer", "Fintech", "bancarias", "CI/CD"],
 };
 
 export const EXPECTED_EN = {
@@ -29,7 +29,7 @@ export const EXPECTED_EN = {
     projects: "Projects",
     contact: "Get in Touch",
   },
-  bioKeywords: ["over 10 years", "Computer Engineer", "Fintech"],
+  bioKeywords: ["Senior QA Engineer", "Fintech", "Banking", "CI/CD"],
 };
 
 export const SOCIAL_URLS = {

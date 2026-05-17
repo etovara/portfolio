@@ -37,10 +37,9 @@ experiencia tienes, en qué industrias has trabajado y cuál es tu
 especialidad. Mira el ejemplo:]]
 
 Ejemplo:
-Computer Engineer and Senior QA Engineer with over 10 years of experience
-in Quality Assurance across Fintech, Banking, and Payment Media environments.
-Specialized in the full end-to-end testing cycle, from requirements analysis
-to execution, automation, and reporting.
+Senior QA Engineer specialized in quality assurance for Fintech, Banking,
+and Payment platforms. Expert in end-to-end testing — from requirements
+analysis through automation, execution, and reporting.
 
 Ubicación:          [[Ej: Buenos Aires, Argentina]]
 Email:              [[ejemplo@correo.com]]

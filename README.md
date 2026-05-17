@@ -1,16 +1,17 @@
-# Portfolio - Edwin Tovar | QA Engineer
+# Portfolio - Edwin Tovar | Senior QA Engineer
 
-## Resumen del proyecto
+## Descripci\u00f3n del proyecto
 
-SPA desarrollada con Next.js 16 + TypeScript + Tailwind CSS. Portfolio personal tipo landing page con las secciones: Hero, About, Experience, Projects, Contact y Footer.
+SPA desarrollada con Next.js 16 + TypeScript + Tailwind CSS. Portfolio profesional tipo landing page con las secciones: Hero, About, Experience, Projects, Contact y Footer. Incluye internacionalizaci\u00f3n ES/EN, modo oscuro y suite completa de testing E2E con Playwright.
 
-## Stack
+## Stack tecnol\u00f3gico
 
 - **Framework:** Next.js 16 (App Router, SSG)
 - **Lenguaje:** TypeScript
 - **Estilos:** Tailwind CSS v4
 - **Fuentes:** Geist (Sans & Mono)
-- **Testing (E2E):** Playwright (atributos `data-testid` en todos los elementos interactivos)
+- **Testing (E2E):** Playwright con Page Object Model
+- **Calidad:** Atributos `data-testid` en todos los elementos interactivos
 
 ## Arquitectura
 
@@ -52,7 +53,7 @@ src/
 
 ## Datos del CV
 
-Los datos corresponden a **Edwin Tovar**, QA Engineer con +10 a\u00f1os de experiencia en Fintech, Banca y Medios de Pago.
+Los datos corresponden a **Edwin Tovar**, Senior QA Engineer especializado en aseguramiento de calidad para plataformas Fintech, bancarias y de pago.
 
 ### Experiencia
 
@@ -83,4 +84,6 @@ npm start        # Servir build de producci\u00f3n
 ## Comandos \u00fatiles
 
 - `npm run lint` - Ejecutar ESLint
-- `npx playwright-cli open http://localhost:3000` - Abrir navegador para testing E2E
+- `npm run test:e2e` - Ejecutar tests E2E con Playwright
+- `npm run test:e2e:ui` - Ejecutar tests con UI interactiva
+- `npm run test:e2e:debug` - Ejecutar tests en modo debug

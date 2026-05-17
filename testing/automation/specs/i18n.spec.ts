@@ -44,8 +44,8 @@ test.describe("Internacionalizaci\u00F3n (i18n) - POM", () => {
   });
 
   test("el contenido del CV debe cambiar de idioma al alternar", async () => {
-    await about.assertBioContains(/m\u00E1s de 10 a\u00F1os/);
+    await about.assertBioContains(/bancarias/);
     await home.clickLangToggle();
-    await about.assertBioContains(/over 10 years/);
+    await about.assertBioContains(/Banking/);
   });
 });
