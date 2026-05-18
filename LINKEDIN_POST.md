@@ -8,7 +8,7 @@ El resultado:
 
 ✅ **Landing page SPA** con 7 componentes (Hero, About, Experience, Projects, Contact, Footer, Header)
 ✅ **Bilingüe ES/EN** con React Context (sin librerías externas)
-✅ **Modo oscuro** automático vía prefers-color-scheme
+✅ **Selector de tema**: Claro 🌞 / Oscuro 🌙 / Sistema 💻 (persistido en localStorage)
 ✅ **37 tests E2E automatizados** con Playwright + Page Object Model
 ✅ **14 casos de prueba manuales** documentados
 ✅ **CI/CD** con GitHub Actions (lint → build → deploy a GitHub Pages)
@@ -24,4 +24,4 @@ Lo más interesante? Todo el proyecto fue desarrollado con asistencia de IA (Cla
 
 ¿Usás IA en tu flujo de trabajo diario? Me encantaría leer tu experiencia en los comentarios.
 
-#QA #SoftwareTesting #NextJS #TypeScript #Playwright #Portfolio #GenAI #AutomationTesting #CI/CD
+#QA #SoftwareTesting #NextJS #TypeScript #Playwright #Portfolio #GenAI #AutomationTesting #CI/CD #DarkMode #WebDevelopment

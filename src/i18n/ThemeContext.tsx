@@ -7,6 +7,7 @@ export type ThemeMode = "light" | "dark" | "system";
 interface ThemeContextValue {
   theme: ThemeMode;
   resolved: "light" | "dark";
+  hydrated: boolean;
   setTheme: (mode: ThemeMode) => void;
 }
 
@@ -14,10 +15,11 @@ const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 const STORAGE_KEY = "portfolio-theme";
 
-function getInitialTheme(): ThemeMode {
-  if (typeof window === "undefined") return "system";
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === "light" || stored === "dark" || stored === "system") return stored;
+function getStoredTheme(): ThemeMode {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === "light" || stored === "dark" || stored === "system") return stored;
+  } catch {}
   return "system";
 }
 
@@ -33,35 +35,42 @@ function applyTheme(theme: ThemeMode) {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<ThemeMode>(getInitialTheme);
-  const [resolved, setResolved] = useState<"light" | "dark">("light");
+  const [theme, setThemeState] = useState<ThemeMode>("system");
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    const stored = getStoredTheme();
+    setThemeState(stored);
+    applyTheme(stored);
+    setHydrated(true);
+  }, []);
 
   const setTheme = useCallback((mode: ThemeMode) => {
     setThemeState(mode);
     localStorage.setItem(STORAGE_KEY, mode);
     applyTheme(mode);
-    const isDark = mode === "dark" || (mode === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-    setResolved(isDark ? "dark" : "light");
   }, []);
 
   useEffect(() => {
-    applyTheme(theme);
-    const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-    setResolved(isDark ? "dark" : "light");
-
+    if (!hydrated) return;
     if (theme === "system") {
       const mq = window.matchMedia("(prefers-color-scheme: dark)");
-      const handler = (e: MediaQueryListEvent) => {
+      const handler = () => {
         applyTheme("system");
-        setResolved(e.matches ? "dark" : "light");
       };
       mq.addEventListener("change", handler);
       return () => mq.removeEventListener("change", handler);
     }
-  }, [theme]);
+  }, [theme, hydrated]);
+
+  const resolved: "light" | "dark" =
+    !hydrated ? "light" :
+    theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ? "dark"
+      : "light";
 
   return (
-    <ThemeContext.Provider value={{ theme, resolved, setTheme }}>
+    <ThemeContext.Provider value={{ theme, resolved, hydrated, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );
