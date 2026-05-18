@@ -38,5 +38,10 @@
   "lang": {
     "switch": "Cambiar idioma a inglés",
     "current": "Español"
+  },
+  "theme": {
+    "light": "Modo Claro",
+    "dark": "Modo Oscuro",
+    "system": "Modo del Sistema"
   }
 }

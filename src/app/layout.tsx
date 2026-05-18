@@ -4,6 +4,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { LanguageProvider } from "@/i18n";
+import { ThemeProvider } from "@/i18n/ThemeContext";
 import "./globals.css";
 
 /* Carga la fuente Geist Sans (texto general) desde Google Fonts */
@@ -25,6 +26,20 @@ export const metadata: Metadata = {
     "Portfolio of Edwin Tovar — Senior QA Engineer specialized in Manual & Automation Testing and AI-Driven Quality Assurance.",
 };
 
+/* Script inline que se ejecuta antes de hidratación para aplicar el tema sin flash */
+const themeScript = `
+(function() {
+  try {
+    var t = localStorage.getItem("portfolio-theme") || "system";
+    var d = document.documentElement;
+    var isDark = t === "dark" || (t === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    if (isDark) d.classList.add("dark");
+    if (t === "light") d.setAttribute("data-theme", "light");
+    else if (t === "dark") d.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,12 +49,17 @@ export default function RootLayout({
     <html
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="min-h-screen bg-white font-sans text-zinc-900 antialiased dark:bg-black dark:text-zinc-100">
-        {/* LanguageProvider envuelve toda la app para que cualquier componente hijo pueda usar useLanguage() */}
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+        <ThemeProvider>
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
