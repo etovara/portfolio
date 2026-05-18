@@ -23,37 +23,37 @@ export default function Hero({ personal }: HeroProps) {
       <div className="text-center">
         {/* Rol profesional en mayúsculas y espaciado amplio */}
         <p
-          className="mb-4 text-sm font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400"
+          className="mb-4 text-sm font-medium uppercase tracking-widest text-zinc-900 dark:text-white"
           data-testid="hero-role"
         >
           {resolveText(personal.role, lang)}
         </p>
         {/* Nombre completo como encabezado principal */}
         <h1
-          className="mb-6 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl md:text-6xl dark:text-zinc-100"
+          className="mb-6 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl md:text-6xl dark:text-white"
           data-testid="hero-name"
         >
           {personal.name}
         </h1>
         {/* Tagline o frase descriptiva */}
         <p
-          className="mx-auto mb-8 max-w-lg text-lg text-zinc-600 dark:text-zinc-400"
+          className="mx-auto mb-8 max-w-lg text-lg text-zinc-900 dark:text-white"
           data-testid="hero-tagline"
         >
           {resolveText(personal.tagline, lang)}
         </p>
-        {/* Botones de llamada a la acción: Ver proyectos, Contactar y Descargar CV */}
-        <div className="flex items-center justify-center gap-4">
+          {/* Botones de llamada a la acción: Ver proyectos, Contactar y Descargar CV */}
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <a
             href="#projects"
-            className="rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
+            className="rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
             data-testid="hero-cta-projects"
           >
             {t.hero.cta_projects}
           </a>
           <a
             href="#contact"
-            className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
+            className="rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
             data-testid="hero-cta-contact"
           >
             {t.hero.cta_contact}
@@ -61,7 +61,7 @@ export default function Hero({ personal }: HeroProps) {
           <a
             href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/cv/Edwin_Tovar_CV_Professional_${lang.toUpperCase()}.pdf`}
             download
-            className="rounded-full border border-emerald-300 bg-emerald-50 px-6 py-3 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-100 dark:border-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 dark:hover:bg-emerald-900"
+            className="rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
             data-testid="hero-cta-cv"
           >
             {t.hero.cta_cv}

@@ -27,7 +27,7 @@ export default function About({ personal, education, certifications }: AboutProp
       </h2>
 
       <p
-        className="text-base leading-relaxed text-zinc-600 dark:text-zinc-400"
+        className="text-base leading-relaxed text-zinc-600 dark:text-zinc-400 text-justify"
         data-testid="about-bio"
       >
         {resolveText(personal.bio, lang)}
