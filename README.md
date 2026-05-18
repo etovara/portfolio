@@ -1,26 +1,30 @@
-# 🚀 SDET Portfolio & Testing Lab — Edwin Tovar
+# 🚀 Edwin Tovar — QA Engineer | Portfolio & Testing Lab (In Progress)
 
-Este no es solo un portafolio profesional; es un **Laboratorio de Ingeniería de Calidad Abierto**. Diseñado para demostrar el potencial de un **QA modernizado por IA** y servir como recurso para la comunidad de testers.
+Este es mi portafolio profesional, diseñado para demostrar mi trayectoria y mi enfoque técnico en la calidad de software. Actualmente, el proyecto se encuentra en su **Fase 1: Lanzamiento de Infraestructura y Diseño**.
 
-## 🎯 Propósito del Proyecto
-1. **Showcase para Reclutadores:** Acceso rápido a mi trayectoria y mi **capacidad de construir infraestructura de calidad**.
-2. **Laboratorio de Comunidad:** Un espacio donde otros testers pueden clonar, ejecutar y proponer mejoras a las suites de automatización.
-3. **Sinergia QA + IA:** Demostración real de cómo integrar LLMs en el ciclo de vida del testing.
+## 🎯 Objetivo del Proyecto
+Crear un espacio centralizado donde reclutadores y la comunidad de QA puedan:
+1. Conocer mi experiencia en Fintech, Banca y Medios de Pago.
+2. Acceder a un **Laboratorio de Testing** (Próximamente) con ejemplos reales de automatización y estrategias de QA.
+3. Ver cómo la IA puede potenciar el flujo de trabajo de un QA moderno.
 
-## 🧪 Ingeniería de Calidad (SDET)
-He sustituido los planes de prueba manuales por un **Quality Engine** automatizado:
+## 🛠️ Stack Tecnológico (Implementado)
+- **Frontend:** Next.js 16 (App Router) + TypeScript.
+- **Estilos:** Tailwind CSS v4 con soporte nativo para Modo Oscuro/Claro.
+- **i18n:** Sistema bilingüe ES/EN implementado con React Context.
+- **Arquitectura:** Data-driven (contenido gestionado desde `data.json`).
 
-### ⚙️ Data-Driven Testing (DDT)
-El motor `engine.spec.ts` valida dinámicamente que la UI refleje fielmente el `data.json`.
-### 👁️ Visual Regression Testing
-Captura y compara snapshots en múltiples viewports para detectar errores de layout.
-### ♿ Accesibilidad (a11y)
-Certificación técnica del cumplimiento de estándares **WCAG 2.1 AA** mediante axe-core.
+## 🧪 Próximos Pasos: El "Testing Lab"
+En las siguientes iteraciones, este repositorio se convertirá en un entorno de pruebas abierto donde incluiré:
+- **Automation Engine:** Suites de Playwright (DDT & Visual Regression).
+- **AI-Driven QA:** Auditorías de calidad automatizadas usando Gemini SDK.
+- **API Lab:** Ejemplos de Contract Testing y validación de microservicios.
+- **Manual Hub:** Documentación de estrategias de testing exploratorio y funcional.
 
-## 🚀 Ejecución
+## 🚀 Ejecución Local
 ```bash
 npm install
-npm run test:e2e
+npm run dev
 ```
 
 ---
