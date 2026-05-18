@@ -1,0 +1,15 @@
+﻿id,type,title,priority,severity,steps,expected,automated,environment
+TC-SMOKE-01,Smoke,Carga de página principal,Alta,Crítica,Abrir navegador → Navegar a http://localhost:3000,"Página carga en <3s, sin errores consola, logo ET visible, título correcto",✅ api.spec.ts,"Desktop, Tablet, Mobile"
+TC-SMOKE-02,Smoke,Navegación por anclas,Alta,Alta,"Clic en cada enlace del menú: Sobre mí, Experiencia, Proyectos, Contacto","Scroll suave, URL con hash correcto, sección visible",✅ hero.spec.ts,Desktop
+TC-SMOKE-03,Smoke,Toggle de idioma ES/EN,Alta,Alta,Clic en botón EN → Verificar textos en inglés → Clic en ES para volver,"Textos cambian a inglés, botón muestra ES, sin recarga",✅ i18n.spec.ts,"Desktop, Mobile"
+TC-SMOKE-04,Smoke,Formulario de contacto,Media,Media,"Llenar nombre, email, mensaje → Clic en Enviar mensaje",Mensaje verde de éxito: Gracias por tu mensaje,✅ contact.spec.ts,"Desktop, Mobile"
+TC-SMOKE-05,Smoke,Menú responsive hamburguesa,Alta,Alta,Viewport 375×667 → Menú desktop oculto → Clic en ☰,"Menú vertical desplegado, opciones visibles, ícono cambia a X",✅ navigation.spec.ts,Mobile
+TC-SMOKE-06,Smoke,Modo oscuro automático,Media,Media,Preferencia sistema → Oscuro → Recargar → Volver a claro,"Fondo negro, texto claro, todos los componentes visibles",❌ Manual,"Desktop, Mobile"
+TC-REG-01,Regression,Enlaces externos de proyectos,Media,Media,Para cada proyecto verificar enlaces Sitio y Código,"Enlaces abren en nueva pestaña, rel=noopener noreferrer",❌ Manual,Desktop
+TC-REG-02,Regression,Enlace mailto de contacto,Media,Media,Clic en correo en sección contacto,Abre cliente de correo con dirección pre-poblada,❌ Manual,Desktop
+TC-REG-03,Regression,Redes sociales,Media,Media,Verificar iconos redes en Hero → LinkedIn apunta a linkedin.com/in/edwintovar,"Iconos visibles, enlaces abren nueva pestaña",✅ hero.spec.ts,Desktop
+TC-REG-04,Regression,Scroll suave entre secciones,Baja,Baja,Clic en enlace navegación → Verificar scroll animado,"Scroll animado, no instantáneo",❌ Manual,Desktop
+TC-REG-05,Regression,Footer con año dinámico,Baja,Baja,Scroll al footer → Verificar copyright con año actual,© {año} Edwin Tovar. Todos los derechos reservados.,✅ footer.spec.ts,"Desktop, Mobile"
+TC-REG-06,Regression,Timeline de experiencia,Alta,Media,Verificar todas las entradas de experiencia,"Cada entrada: rol, empresa, período, descripción, tecnologías",✅ experience.spec.ts,"Desktop, Mobile"
+TC-REG-07,Regression,Grilla responsive de proyectos,Alta,Media,"Desktop → 2 columnas, Móvil → 1 columna","Cada tarjeta: ícono, título, descripción, tecnologías",✅ projects.spec.ts,"Desktop, Mobile"
+TC-REG-08,Regression,Validación HTML5 formulario,Media,Media,Enviar vacío → Enviar solo nombre → Enviar email inválido → Enviar completo,Validación nativa del navegador en cada campo,✅ contact.spec.ts,Desktop

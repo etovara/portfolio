@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { HomePage } from "../pages";
 
-test.describe("Navegaci\u00F3n general - POM", () => {
+test.describe("Navegación general - POM", () => {
   let home: HomePage;
 
   test.beforeEach(async ({ page }) => {
@@ -19,14 +19,14 @@ test.describe("Navegaci\u00F3n general - POM", () => {
     await home.assertVisible("lang-toggle");
   });
 
-  test("los enlaces de navegaci\u00F3n desktop deben estar visibles", async ({ page }) => {
+  test("los enlaces de navegación desktop deben estar visibles", async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 768 });
     for (const label of ["sobre mí", "experiencia", "proyectos", "contacto"]) {
       await expect(await home.getDesktopNavLink(label)).toBeVisible();
     }
   });
 
-  test("debe mostrar el men\u00FA m\u00F3vil al hacer clic en el toggle", async ({ page }) => {
+  test("debe mostrar el menú móvil al hacer clic en el toggle", async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
     await home.clickMenuToggle();
     await expect(await home.getMobileNavLink("sobre mí")).toBeVisible();

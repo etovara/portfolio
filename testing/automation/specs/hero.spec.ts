@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { HomePage, HeroSection } from "../pages";
 
-test.describe("Secci\u00F3n Hero - POM", () => {
+test.describe("Sección Hero - POM", () => {
   let hero: HeroSection;
 
   test.beforeEach(async ({ page }) => {
@@ -29,7 +29,7 @@ test.describe("Secci\u00F3n Hero - POM", () => {
     await hero.assertUrl(/#contact/);
   });
 
-  test("debe mostrar el enlace de LinkedIn si est\u00E1 configurado", async () => {
+  test("debe mostrar el enlace de LinkedIn si está configurado", async () => {
     const linkedin = await hero.getSocialLinkedin();
     if (await linkedin.isVisible()) {
       await expect(linkedin).toHaveAttribute("href", /linkedin/);

@@ -11,6 +11,10 @@ export interface Personal {
   avatar: string;
   location: string;
   email: string;
+  phone: string;
+  englishLevel: string;
+  availability: string;
+  workAuthorization: string;
   social: {
     github: string;
     linkedin: string;
@@ -18,11 +22,25 @@ export interface Personal {
   };
 }
 
+export interface Education {
+  institution: string;
+  degree: string;
+  period: string;
+  description?: string;
+}
+
+export interface Certification {
+  name: string;
+  issuer?: string;
+  year?: string;
+}
+
 export interface Experience {
   id: string;
   company: string;
   role: BilingualText;
   period: string;
+  modality: string;
   description: BilingualText;
   technologies: string[];
 }
@@ -41,4 +59,6 @@ export interface PortfolioData {
   personal: Personal;
   experience: Experience[];
   projects: Project[];
+  education: Education[];
+  certifications: Certification[];
 }

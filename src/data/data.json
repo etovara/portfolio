@@ -2,22 +2,26 @@
   "personal": {
     "name": "Edwin Tovar",
     "role": {
-      "en": "QA Engineer | Manual & Automation Testing | AI-Driven QA",
-      "es": "Ingeniero de QA | Pruebas Manuales y Automatizadas | QA con IA"
+      "en": "QA Analyst | Manual & Automation | Business Analytics | API Testing",
+      "es": "Analista QA | Manual & Automatización | Business Analytics | API Testing"
     },
     "tagline": {
       "en": "10+ years ensuring quality across Fintech, Banking, and Payment platforms",
-      "es": "M\u00E1s de 10 a\u00F1os garantizando calidad en Fintech, Banca y Plataformas de Pago"
+      "es": "Más de 10 años garantizando calidad en Fintech, Banca y Plataformas de Pago"
     },
     "bio": {
-      "en": "Senior QA Engineer specialized in quality assurance for Fintech, Banking, and Payment platforms. Expert in end-to-end testing \u2014 from requirements analysis through automation, execution, and reporting.\n\nExperienced in implementing AI-driven testing solutions that reduce manual effort, improve maintainability, and accelerate CI/CD pipelines. Skilled in automated visual validation, predictive defect analysis, and accessibility testing across web and mobile. Passionate about continuous improvement, process efficiency, and delivering high-quality products in Agile environments.",
-      "es": "Senior QA Engineer especializado en aseguramiento de calidad para plataformas Fintech, bancarias y de pago. Experto en pruebas integrales \u2014 desde el an\u00E1lisis de requisitos hasta la automatizaci\u00F3n, ejecuci\u00F3n y reporting.\n\nCon experiencia implementando soluciones de pruebas basadas en IA que reducen el esfuerzo manual, mejoran la mantenibilidad y aceleran pipelines de CI/CD. Capacitado en validaci\u00F3n visual automatizada, an\u00E1lisis predictivo de defectos y pruebas de accesibilidad web y m\u00F3vil. Apasionado por la mejora continua, la eficiencia de procesos y la entrega de productos de alta calidad en entornos \u00E1giles."
+      "en": "QA and Business Analysis professional with a proven track record optimizing critical ecosystems for Banking, Fintech, and Payment platforms. My approach combines technical testing rigor with process engineering, ensuring every digital product is functional, profitable, and resilient.\n\nQA Strategic Leadership: Specialist in test planning for high-complexity transactional platforms and financial core systems, prioritizing operational risk mitigation and data integrity in high-demand environments.\n\nBusiness Analytics & Bridge Management: Expert in translating business needs into actionable technical specifications, serving as the critical link between stakeholders and development teams throughout the product lifecycle.\n\nModern Testing & AI Adoption: Driving implementation of modern automation architectures and API testing strategies. Pioneer in integrating Generative AI and observability tools (RedHat/OpenShift/AWS) into QA workflows.\n\nAccessibility Governance: Ensuring WCAG compliance and digital inclusion across platforms using industry-leading assistive technologies.",
+      "es": "Analista de Aseguramiento de la Calidad y Análisis de Negocios con una trayectoria consolidada en la optimización de ecosistemas críticos para entidades bancarias, Fintech y Medios de Pago. Mi enfoque combina el rigor técnico del testing con la ingeniería de procesos, garantizando que cada producto digital sea funcional, rentable y resiliente.\n\nQA Strategic Leadership: Especialista en diseño de planes de prueba para plataformas transaccionales de alta complejidad y sistemas core financieros, priorizando la mitigación de riesgos operativos y la protección de la integridad de datos en entornos de alta demanda.\n\nBusiness Analytics & Bridge Management: Experto en transformar necesidades de negocio en especificaciones técnicas accionables, actuando como nexo crítico entre stakeholders y equipos de desarrollo durante todo el ciclo de vida del producto.\n\nModern Testing & AI Adoption: Liderazgo en la implementación de arquitecturas de automatización modernas y estrategias de pruebas de API. Pionero en integrar IA Generativa y herramientas de observabilidad (RedHat/OpenShift/AWS) en flujos de QA.\n\nGobernanza de Accesibilidad: Asegurando el cumplimiento WCAG y la inclusión digital en todas las plataformas mediante herramientas de asistencia líderes."
     },
     "avatar": "/avatar.jpg",
-    "location": "Buenos Aires, Argentina",
+    "location": "Ciudad Autónoma de Buenos Aires, Argentina",
     "email": "edwintovaraladejo@gmail.com",
+    "phone": "+54 (911) 26455051",
+    "englishLevel": "Técnico (sin certificación formal)",
+    "availability": "Inmediata",
+    "workAuthorization": "Argentina — Ciudad Autónoma de Buenos Aires",
     "social": {
-      "github": "",
+      "github": "https://github.com/etovara",
       "linkedin": "https://linkedin.com/in/edwintovar",
       "twitter": ""
     }
@@ -25,73 +29,78 @@
   "experience": [
     {
       "id": "exp-1",
-      "company": "SOFI",
+      "company": "SoFi",
       "role": {
         "en": "Senior QA Engineer",
         "es": "Ingeniero de QA Senior"
       },
-      "period": "2023 \u2014 April 2026",
+      "period": "Sep 2023 — Apr 2026",
+      "modality": "Remoto",
       "description": {
-        "en": "Plan and execute manual and automated testing for Fintech platforms. Implement AI-driven testing solutions including Testim.io, Mabl, and Applitools Eyes. Integrate testing suites into CI/CD pipelines for automated executions during each build and deployment. Perform API testing with Postman, cloud testing in AWS Lambda, and accessibility testing with NVDA and VoiceOver.",
-        "es": "Planificar y ejecutar pruebas manuales y automatizadas para plataformas Fintech. Implementar soluciones de testing impulsadas por IA incluyendo Testim.io, Mabl y Applitools Eyes. Integrar suites de pruebas en tuber\u00EDas CI/CD para ejecuciones automatizadas durante cada compilaci\u00F3n y despliegue. Realizar pruebas de API con Postman, pruebas en la nube con AWS Lambda y pruebas de accesibilidad con NVDA y VoiceOver."
+        "en": "Led quality assurance for multiple financial product launches across Web and Mobile ecosystems, ensuring a frictionless, high-availability user experience. Governed the full development lifecycle through Scrum methodologies (Sprint Planning, Refinements, Demos, Retrospectives), aligning technical execution with business objectives each sprint. Designed comprehensive test plans with critical focus on Regression and End-to-End (E2E) testing, minimizing production impact. Executed multi-layer validation across Frontend, API integration, and Databases, ensuring data integrity and correct microservice communication. Leveraged Confluence, Jira, Zephyr, Postman, SoapUI, DBeaver, RedHat OpenShift, Bitbucket, Selenium WebDriver, BrowserStack, and ANDI for accessibility testing.",
+        "es": "Lideré el aseguramiento de calidad para el lanzamiento de múltiples productos financieros en ecosistemas Web y Mobile, garantizando una experiencia de usuario sin fricciones y de alta disponibilidad. Gestioné el ciclo de vida del desarrollo mediante Scrum (Sprint Planning, Refinements, Demos y Retrospectivas), alineando la ejecución técnica con los objetivos del negocio en cada sprint. Diseñé planes de prueba integrales con foco crítico en Regresión y End-to-End (E2E), minimizando el impacto en producción. Ejecuté validación multicapa en Frontend, integración de APIs y Base de Datos, asegurando la integridad de la información y la correcta comunicación entre microservicios. Utilicé Confluence, Jira, Zephyr, Postman, SoapUI, DBeaver, RedHat OpenShift, Bitbucket, Selenium WebDriver, BrowserStack y ANDI para pruebas de accesibilidad."
       },
-      "technologies": ["Selenium", "Testim.io", "Mabl", "Applitools Eyes", "Postman", "AWS Lambda", "MongoDB", "Bitbucket"]
+      "technologies": ["Selenium WebDriver", "Playwright", "Postman", "SoapUI", "DBeaver", "RedHat OpenShift", "Bitbucket", "BrowserStack", "Jira", "Zephyr", "Confluence", "ANDI"]
     },
     {
       "id": "exp-2",
       "company": "Banco ICBC / IT Patagonia",
       "role": {
         "en": "QA Tester Agile",
-        "es": "Tester QA \u00C1gil"
+        "es": "Tester QA Ágil"
       },
-      "period": "2022",
+      "period": "Jul 2022 — Aug 2023",
+      "modality": "Remoto",
       "description": {
-        "en": "Executed functional tests (Front-end, Back-end, API, Web Services). Designed and executed test cases for Corporate Home Banking. Used HP ALM, Postman, Insomnia, and Xray. Reported and tracked defects in Jira and Confluence.",
-        "es": "Ejecut\u00E9 pruebas funcionales (Front-end, Back-end, API, Servicios Web). Dise\u00F1\u00E9 y ejecut\u00E9 casos de prueba para Banca Corporativa en L\u00EDnea. Utilic\u00E9 HP ALM, Postman, Insomnia y Xray. Report\u00E9 y di seguimiento a defectos en Jira y Confluence."
+        "en": "Analyzed and tracked internal projects within the Corporate Home Banking Platform and mobile apps for Banco ICBC. Designed and executed manual test cases, performing testing at Frontend, Backend, API, and Web Services levels. Managed defects and test documentation using HP ALM, Postman, SOAP, Insomnia, Control Center, Xray, and Spira. Generated test reports, detected and documented bugs in Jira and Confluence.",
+        "es": "Analicé y di seguimiento a los proyectos internos de la Plataforma Home Banking Empresas y Apps del Banco ICBC. Diseñé y ejecuté casos de prueba manuales, realizando pruebas a nivel de Frontend, Backend, API y Web Services. Gestioné defectos y documentación de pruebas usando HP ALM, Postman, SOAP, Insomnia, Control Center, Xray y Spira. Generé informes, detecté y reporté bugs en Jira y Confluence."
       },
-      "technologies": ["HP ALM", "Postman", "Insomnia", "Xray", "Jira", "Confluence"]
+      "technologies": ["HP ALM", "Postman", "SOAP", "Insomnia", "Control Center", "Xray", "Spira", "Jira", "Confluence"]
     },
     {
       "id": "exp-3",
-      "company": "Prisma Medios de Pagos",
+      "company": "Prisma Medios de Pago",
       "role": {
-        "en": "Business Analyst III",
-        "es": "Analista de Negocio III"
+        "en": "Business Analyst III — IT Shared Services",
+        "es": "Business Analyst III — IT Shared Services"
       },
-      "period": "2021 \u2014 2022",
+      "period": "Feb 2021 — May 2022",
+      "modality": "Remoto",
       "description": {
-        "en": "Designed and executed functional and non-functional tests. Tested REST and XML services. Supported project coordination with Visa, MasterCard, and American Express. Generated test data and functional documentation.",
-        "es": "Dise\u00F1\u00E9 y ejecut\u00E9 pruebas funcionales y no funcionales. Prob\u00E9 servicios REST y XML. Apoy\u00E9 la coordinaci\u00F3n de proyectos con Visa, MasterCard y American Express. Gener\u00E9 datos de prueba y documentaci\u00F3n funcional."
+        "en": "Business Analyst for Systems serving Banks and Financial Institutions across Latin America and the Caribbean. Managed external projects with international brands including Visa, MasterCard, and American Express. Led requirements gathering and functional analysis of Issuer and Acquirer business processes for credit and debit cards. Coordinated development requests across technical and agile teams. Designed and executed manual test cases at Frontend, Backend, API, and Web Services levels using HP ALM, Postman, SOAP, Insomnia, Control Center, Xray, and Spira.",
+        "es": "Analista de Negocios III de Sistemas para Bancos y Entidades Financieras de Latinoamérica y el Caribe. Gestioné proyectos externos con marcas internacionales: Visa, MasterCard y American Express. Lideré el relevamiento y análisis funcional de procesos de negocio Emisor y Adquirente de tarjeta de crédito y débito. Coordiné los desarrollos solicitados por las distintas áreas en conjunto con los equipos técnicos/ágiles. Diseñé y ejecuté casos de prueba manuales a nivel de Frontend, Backend, API y Web Services usando HP ALM, Postman, SOAP, Insomnia, Control Center, Xray y Spira."
       },
-      "technologies": ["REST", "XML", "SoapUI", "Postman"]
+      "technologies": ["HP ALM", "Postman", "SOAP", "Insomnia", "Control Center", "Xray", "Spira", "Jira", "Confluence"]
     },
     {
       "id": "exp-4",
-      "company": "Banco Galicia / Voolkia Software",
+      "company": "Banco Galicia / Voolkia Software & Services",
       "role": {
-        "en": "Functional Analyst / Senior QA Tester",
-        "es": "Analista Funcional / Tester QA Senior"
+        "en": "Functional Analyst / Senior QA Tester Manual",
+        "es": "Analista Funcional / Tester QA Manual Senior"
       },
-      "period": "2019 \u2014 2021",
+      "period": "Jun 2019 — Feb 2021",
+      "modality": "Presencial",
       "description": {
-        "en": "Gathered, analyzed, and designed adaptive and corrective requirements. Coordinated with Product Managers and Stakeholders. Executed manual testing and managed incident tracking.",
-        "es": "Recopil\u00E9, analic\u00E9 y dise\u00F1\u00E9 requisitos adaptativos y correctivos. Coordin\u00E9 con Product Managers y Stakeholders. Ejecut\u00E9 pruebas manuales y gestion\u00E9 el seguimiento de incidentes."
+        "en": "Interacted with users for requirements gathering, analysis, and design of adaptive and corrective requirements, transforming them into valuable client solutions meeting quality standards and defined timelines. Defined product strategy and needs based on metrics and data under agile methodologies. Created, planned, prioritized, and tracked the product backlog, keeping all stakeholders informed. Designed and executed manual test cases at Frontend, Backend, API, and Web Services levels using HP ALM, Postman, SOAP, Insomnia, Control Center, Xray, and Spira.",
+        "es": "Interactué con usuarios para relevamiento de información, análisis y diseño de requerimientos adaptativos y correctivos, transformándolos en soluciones de valor para el cliente cumpliendo con estándares de calidad y tiempos definidos. Definí la estrategia y necesidades del producto con base en métricas y datos bajo metodologías ágiles. Creé, planifiqué, prioricé y di seguimiento al backlog de producto, manteniendo informados a los stakeholders. Diseñé y ejecuté casos de prueba manuales a nivel de Frontend, Backend, API y Web Services usando HP ALM, Postman, SOAP, Insomnia, Control Center, Xray y Spira."
       },
-      "technologies": ["Jira", "Confluence", "TestRail", "Selenium"]
+      "technologies": ["HP ALM", "Postman", "SOAP", "Insomnia", "Control Center", "Xray", "Spira", "Jira", "Confluence"]
     },
     {
       "id": "exp-5",
       "company": "Banesco Banco Universal",
       "role": {
-        "en": "Functional Analyst / QA Tester",
-        "es": "Analista Funcional / Tester QA"
+        "en": "Functional Analyst / QA Tester Manual",
+        "es": "Analista Funcional / Tester QA Manual"
       },
-      "period": "2012 \u2014 2018",
+      "period": "Feb 2014 — Sep 2018",
+      "modality": "Presencial",
       "description": {
-        "en": "Designed and executed functional test cases (Smoke, Exploratory, Regression). Created test plans and estimates. Detected and documented defects in Jira.",
-        "es": "Dise\u00F1\u00E9 y ejecut\u00E9 casos de prueba funcionales (Smoke, Exploratorio, Regresi\u00F3n). Cre\u00E9 planes de prueba y estimaciones. Detect\u00E9 y document\u00E9 defectos en Jira."
+        "en": "Interacted with users for requirements gathering, analysis, and design of adaptive and corrective requirements. Analyzed and detected improvement opportunities in management systems and critical requirements. Designed test cases, test plans, and estimations. Executed manual testing on web applications including Smoke, Exploratory, Regression, and Re-Test. Documented and tracked defects using Jira and HP ALM.",
+        "es": "Interactué con usuarios para relevamiento de información, análisis y diseño de requerimientos adaptativos y correctivos. Analicé y detecté oportunidades de mejora en sistemas de gestión y requerimientos críticos. Diseñé casos de prueba, planes de prueba y estimaciones. Ejecuté pruebas manuales sobre aplicaciones web: Smoke Test, Exploratorio, Regresión y Re Test. Documenté y di seguimiento a defectos usando Jira y HP ALM."
       },
-      "technologies": ["Jira", "HP ALM", "SQL"]
+      "technologies": ["Jira", "HP ALM", "SQL", "Postman"]
     }
   ],
   "projects": [
@@ -99,11 +108,11 @@
       "id": "proj-1",
       "title": {
         "en": "AI-Driven Test Automation Suite",
-        "es": "Suite de Automatizaci\u00F3n de Pruebas con IA"
+        "es": "Suite de Automatización de Pruebas con IA"
       },
       "description": {
         "en": "Implemented AI-powered testing solutions using Testim.io and Mabl for intelligent script creation and maintenance, reducing manual effort and improving test suite maintainability.",
-        "es": "Implement\u00E9 soluciones de testing impulsadas por IA usando Testim.io y Mabl para la creaci\u00F3n y mantenimiento inteligente de scripts, reduciendo el esfuerzo manual y mejorando la mantenibilidad de las suites de prueba."
+        "es": "Implementé soluciones de testing impulsadas por IA usando Testim.io y Mabl para la creación y mantenimiento inteligente de scripts, reduciendo el esfuerzo manual y mejorando la mantenibilidad de las suites de prueba."
       },
       "technologies": ["Testim.io", "Mabl", "Applitools Eyes", "ChatGPT", "Selenium"],
       "url": "",
@@ -118,7 +127,7 @@
       },
       "description": {
         "en": "Planned and executed comprehensive manual and automated testing for Fintech platforms, integrating suites into CI/CD pipelines with Bitbucket for automated executions during builds and deployments.",
-        "es": "Planifiqu\u00E9 y ejecut\u00E9 pruebas manuales y automatizadas integrales para plataformas Fintech, integrando las suites en tuber\u00EDas CI/CD con Bitbucket para ejecuciones automatizadas durante compilaciones y despliegues."
+        "es": "Planifiqué y ejecuté pruebas manuales y automatizadas integrales para plataformas Fintech, integrando las suites en tuberías CI/CD con Bitbucket para ejecuciones automatizadas durante compilaciones y despliegues."
       },
       "technologies": ["Selenium", "Postman", "AWS Lambda", "MongoDB", "Bitbucket CI/CD"],
       "url": "",
@@ -133,7 +142,7 @@
       },
       "description": {
         "en": "Executed accessibility testing across web and mobile platforms using NVDA, VoiceOver, and TalkBack, ensuring WCAG compliance for banking applications.",
-        "es": "Ejecut\u00E9 pruebas de accesibilidad en plataformas web y m\u00F3viles usando NVDA, VoiceOver y TalkBack, asegurando el cumplimiento WCAG para aplicaciones bancarias."
+        "es": "Ejecuté pruebas de accesibilidad en plataformas web y móviles usando NVDA, VoiceOver y TalkBack, asegurando el cumplimiento WCAG para aplicaciones bancarias."
       },
       "technologies": ["NVDA", "VoiceOver", "TalkBack", "BrowserStack", "Charles Proxy"],
       "url": "",
@@ -144,16 +153,65 @@
       "id": "proj-4",
       "title": {
         "en": "Corporate Home Banking Testing",
-        "es": "Pruebas de Banca Corporativa en L\u00EDnea"
+        "es": "Pruebas de Banca Corporativa en Línea"
       },
       "description": {
         "en": "Designed and executed functional test cases for Corporate Home Banking platforms, covering front-end, back-end, API, and web services with comprehensive defect tracking.",
-        "es": "Dise\u00F1\u00E9 y ejecut\u00E9 casos de prueba funcionales para plataformas de Banca Corporativa en L\u00EDnea, cubriendo front-end, back-end, API y servicios web con seguimiento integral de defectos."
+        "es": "Diseñé y ejecuté casos de prueba funcionales para plataformas de Banca Corporativa en Línea, cubriendo front-end, back-end, API y servicios web con seguimiento integral de defectos."
       },
       "technologies": ["HP ALM", "Postman", "Insomnia", "Xray", "Jira"],
       "url": "",
       "github": "",
       "image": "/projects/homebanking.jpg"
+    },
+    {
+      "id": "proj-5",
+      "title": {
+        "en": "Professional Portfolio Website",
+        "es": "Sitio Web de Portafolio Profesional"
+      },
+      "description": {
+        "en": "Built a bilingual (ES/EN) portfolio SPA using Next.js 16, TypeScript, and Tailwind CSS v4. Features SSG, dark mode, i18n, Playwright E2E tests, CI/CD with GitHub Actions, and automated deployment to GitHub Pages.",
+        "es": "Construí un portfolio SPA bilingüe (ES/EN) usando Next.js 16, TypeScript y Tailwind CSS v4. Incluye SSG, modo oscuro, i18n, tests E2E con Playwright, CI/CD con GitHub Actions y despliegue automatizado a GitHub Pages."
+      },
+      "technologies": ["Next.js 16", "TypeScript", "Tailwind CSS v4", "Playwright", "GitHub Actions", "GitHub Pages"],
+      "url": "https://etovara.github.io/portfolio",
+      "github": "https://github.com/etovara/portfolio",
+      "image": "/projects/portfolio.jpg"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad 'Alejandro de Humboldt'",
+      "degree": "Ingeniero en Informática",
+      "period": "2012 — 2016",
+      "description": "Ingeniería Informática"
+    },
+    {
+      "institution": "I.U.T. 'Antonio José de Sucre'",
+      "degree": "Técnico Superior en Informática",
+      "period": "",
+      "description": "Ingeniería Informática"
+    },
+    {
+      "institution": "Instituto de Formación Profesional CBTECH",
+      "degree": "Seguridad Informática para Profesionales IT",
+      "period": "2012",
+      "description": "Curso de Seguridad Informática"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Gestión de proyectos con metodologías Ágiles y enfoques Lean (9.ª edición)"
+    },
+    {
+      "name": "Automatizar Pruebas con TestProject — QA Automation Mobile"
+    },
+    {
+      "name": "Desarrollo Web"
+    },
+    {
+      "name": "Software Testing de aplicaciones. Postman. Testing de API"
     }
   ]
 }

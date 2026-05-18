@@ -1,55 +1,83 @@
 # Portfolio - Edwin Tovar | Senior QA Engineer
 
-## Descripci\u00f3n del proyecto
+Portfolio profesional tipo landing page desarrollado con Next.js 16 + TypeScript + Tailwind CSS. Incluye secciones Hero, About, Experience, Projects, Contact y Footer, con internacionalización ES/EN, modo oscuro y suite completa de testing E2E con Playwright.
 
-SPA desarrollada con Next.js 16 + TypeScript + Tailwind CSS. Portfolio profesional tipo landing page con las secciones: Hero, About, Experience, Projects, Contact y Footer. Incluye internacionalizaci\u00f3n ES/EN, modo oscuro y suite completa de testing E2E con Playwright.
-
-## Stack tecnol\u00f3gico
+## Stack tecnológico
 
 - **Framework:** Next.js 16 (App Router, SSG)
-- **Lenguaje:** TypeScript
-- **Estilos:** Tailwind CSS v4
-- **Fuentes:** Geist (Sans & Mono)
+- **Lenguaje:** TypeScript (strict mode)
+- **Estilos:** Tailwind CSS v4 + PostCSS
+- **Fuentes:** Geist Sans & Geist Mono (`next/font/google`)
 - **Testing (E2E):** Playwright con Page Object Model
 - **Calidad:** Atributos `data-testid` en todos los elementos interactivos
+- **CI/CD:** GitHub Actions (lint + build + deploy a GitHub Pages)
+- **CV:** Generación automática de PDF con Playwright
+
+## Requisitos previos
+
+- **Node.js** 20.x o superior
+- **npm** 9.x o superior
+- **Git** (para clonar el repositorio)
+
+## Cómo clonar y ejecutar
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/etovara/portfolio.git
+cd portfolio
+
+# 2. Instalar dependencias
+npm ci
+
+# 3. Iniciar servidor de desarrollo
+npm run dev
+
+# 4. Abrir en el navegador
+# http://localhost:3000
+```
+
+## Scripts disponibles
+
+| Comando | Descripción |
+|---------|-------------|
+| `npm run dev` | Servidor de desarrollo en localhost:3000 |
+| `npm run build` | Build de producción (SSG) |
+| `npm start` | Servir build de producción |
+| `npm run lint` | Ejecutar ESLint |
+| `npm run test:e2e` | Tests E2E con Playwright (Chromium + Mobile) |
+| `npm run test:e2e:ui` | Tests con UI interactiva |
+| `npm run test:e2e:debug` | Tests en modo debug |
+| `node scripts/generate-cv-pdf.mjs` | Generar CV en PDF bilingüe |
 
 ## Arquitectura
 
 ```
-src/
-├── app/
-│   ├── globals.css        # Estilos globales + Tailwind
-│   ├── layout.tsx         # Layout root + LanguageProvider
-│   └── page.tsx           # Home: compone todos los m\u00f3dulos
-├── components/
-│   ├── Header.tsx         # Nav fija, men\u00fa responsive, bot\u00f3n ES/EN
-│   ├── Hero.tsx           # Presentaci\u00f3n + redes sociales
-│   ├── About.tsx          # Bio + ubicaci\u00f3n
-│   ├── Experience.tsx     # Timeline de experiencia laboral
-│   ├── Projects.tsx       # Grid de proyectos con enlaces
-│   ├── Contact.tsx        # Formulario de contacto
-│   └── Footer.tsx         # Copyright + navegaci\u00f3n
-├── data/
-│   └── data.json          # Datos del CV (personal, experience, projects)
-├── i18n/
-│   ├── es.json            # Traducciones UI en espa\u00f1ol
-│   ├── en.json            # Traducciones UI en ingl\u00e9s
-│   ├── LanguageContext.tsx # Contexto + Provider + hook useLanguage
-│   └── index.ts           # Re-exportaciones
-└── types/
-    └── index.ts           # Interfaces TypeScript
+portfolio/
+├── src/
+│   ├── app/                  # App Router (layout, page, sitemap)
+│   ├── components/           # Componentes React (Header, Hero, About, etc.)
+│   ├── data/
+│   │   └── data.json         # Datos centralizados del CV
+│   ├── i18n/                 # Internacionalización manual (ES/EN)
+│   └── types/                # Interfaces TypeScript
+├── testing/
+│   ├── automation/           # Tests Playwright con POM (9 specs, 37 tests)
+│   │   ├── pages/            # Page Objects
+│   │   ├── specs/            # Tests automatizados
+│   │   ├── fixtures/         # Datos de prueba
+│   │   └── playwright.config.ts
+│   ├── manual/               # Pruebas manuales (smoke, regresión, exploratorio)
+│   ├── export/               # Exportación de casos (.xls / .csv)
+│   ├── TEST_SCENARIOS.md     # Documentación de escenarios
+│   └── test-plan.md          # Plan de pruebas general
+├── scripts/
+│   ├── generate-cv-pdf.mjs   # Generador de PDF del CV
+│   └── export-test-cases.mjs # Exportador de casos de prueba
+├── .github/workflows/        # CI/CD (lint + build + deploy)
+├── PROMPT.md                 # Prompt para creadores de portafolio
+├── PROMPT-LLM.md             # Prompt optimizado para LLMs
+└── ARCHITECTURE.md           # Documentación de arquitectura
 ```
-
-## Caracter\u00edsticas implementadas
-
-1. **Arquitectura basada en componentes** - 7 componentes at\u00f3micos con props tipadas
-2. **Data-driven** - Datos consumidos desde `data.json` (no hardcodeados)
-3. **data-testid** - Todos los elementos interactivos tienen atributos para E2E
-4. **Responsive** - Men\u00fa mobile con hamburger toggle, grid 1/2 columnas
-5. **Accesibilidad** - Roles ARIA, aria-label, aria-expanded, aria-required
-6. **Dark mode** - Soporte completo via `prefers-color-scheme`
-7. **i18n** - Traducciones ES/EN para toda la UI con contexto React
-8. **Header** - Fondo blanco s\u00f3lido con textos oscuros para diferenciarse
 
 ## Datos del CV
 
@@ -57,13 +85,13 @@ Los datos corresponden a **Edwin Tovar**, Senior QA Engineer especializado en as
 
 ### Experiencia
 
-| Empresa | Rol | Per\u00edodo |
+| Empresa | Rol | Período |
 |---------|-----|-----------|
-| SOFI | Senior QA Engineer | 2023 \u2014 Abril 2026 |
-| Banco ICBC / IT Patagonia | QA Tester Agile | 2022 |
-| Prisma Medios de Pagos | Business Analyst III | 2021 \u2014 2022 |
-| Banco Galicia / Voolkia | Functional Analyst / Senior QA Tester | 2019 \u2014 2021 |
-| Banesco Banco Universal | Functional Analyst / QA Tester | 2012 \u2014 2018 |
+| SOFI | Senior QA Engineer | 2023 — Abril 2026 |
+| Banco ICBC / IT Patagonia | QA Tester Agile | 2022 — 2023 |
+| Prisma Medios de Pagos | Business Analyst III | 2021 — 2022 |
+| Banco Galicia / Voolkia | Functional Analyst / Senior QA Tester | 2019 — 2021 |
+| Banesco Banco Universal | Functional Analyst / QA Tester | 2014 — 2018 |
 
 ### Proyectos destacados
 
@@ -71,19 +99,38 @@ Los datos corresponden a **Edwin Tovar**, Senior QA Engineer especializado en as
 - Fintech QA Platform
 - Accessibility Testing Framework
 - Corporate Home Banking Testing
+- Professional Portfolio Website
 
-## C\u00f3mo ejecutar
+## Características implementadas
 
-```bash
-cd portfolio
-npm run dev      # Desarrollo en http://localhost:3000
-npm run build    # Build de producci\u00f3n
-npm start        # Servir build de producci\u00f3n
-```
+1. **Arquitectura basada en componentes** - 7 componentes atómicos con props tipadas
+2. **Data-driven** - Datos consumidos desde `data.json` (no hardcodeados)
+3. **data-testid** - Todos los elementos interactivos tienen atributos para E2E
+4. **Responsive** - Menú mobile con hamburger toggle, grid 1/2 columnas
+5. **Accesibilidad** - Roles ARIA, aria-label, aria-expanded, aria-required
+6. **Dark mode** - Soporte completo via `prefers-color-scheme`
+7. **i18n** - Traducciones ES/EN para toda la UI con contexto React
+8. **SSG** - Generación estática para máximo rendimiento
+9. **CV PDF** - Generación automática de CV bilingüe en PDF
+10. **Testing E2E** - 37 tests automatizados + 14 casos manuales
 
-## Comandos \u00fatiles
+## Cobertura de pruebas
 
-- `npm run lint` - Ejecutar ESLint
-- `npm run test:e2e` - Ejecutar tests E2E con Playwright
-- `npm run test:e2e:ui` - Ejecutar tests con UI interactiva
-- `npm run test:e2e:debug` - Ejecutar tests en modo debug
+| Tipo | Cantidad | Estado |
+|------|----------|--------|
+| Smoke Tests Manuales | 6 | ✅ Documentados |
+| Regression Tests Manuales | 8 | ✅ Documentados |
+| Tests Automatizados (UI) | 30 | ✅ Playwright + POM |
+| Tests Automatizados (API) | 7 | ✅ Playwright HTTP |
+| **Total** | **51** | ✅ |
+
+## Despliegue
+
+El proyecto se despliega automáticamente a GitHub Pages mediante GitHub Actions al hacer push a `master`:
+- **URL:** https://etovara.github.io/portfolio
+- **CI:** Lint + Build en PRs a `master` y `testing`
+- **Deploy:** Push a `master` → build + deploy a GitHub Pages
+
+## Licencia
+
+MIT
