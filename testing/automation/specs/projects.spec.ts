@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { ProjectsSection } from "../pages";
 
-test.describe("Secci\u00F3n Proyectos - POM", () => {
+test.describe("Sección Proyectos - POM", () => {
   let projects: ProjectsSection;
 
   test.beforeEach(async ({ page }) => {
@@ -18,7 +18,7 @@ test.describe("Secci\u00F3n Proyectos - POM", () => {
     expect(count).toBeGreaterThan(0);
   });
 
-  test("cada proyecto debe tener t\u00EDtulo y descripci\u00F3n", async () => {
+  test("cada proyecto debe tener título y descripción", async () => {
     const ids = await projects.getCardIds();
     for (const id of ids) {
       await projects.assertVisible(`project-title-${id}`);

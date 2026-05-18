@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Pruebas de API - Sitio Est\u00E1tico", () => {
+test.describe("Pruebas de API - Sitio Estático", () => {
   const BASE_URL = "http://localhost:3000";
 
   test("GET / debe retornar status 200", async ({ request }) => {
@@ -8,7 +8,7 @@ test.describe("Pruebas de API - Sitio Est\u00E1tico", () => {
     expect(response.status()).toBe(200);
   });
 
-  test("GET /sitemap.xml debe retornar XML v\u00E1lido", async ({ request }) => {
+  test("GET /sitemap.xml debe retornar XML válido", async ({ request }) => {
     const response = await request.get(`${BASE_URL}/sitemap.xml`);
     expect(response.status()).toBe(200);
     const headers = response.headers();
@@ -41,7 +41,7 @@ test.describe("Pruebas de API - Sitio Est\u00E1tico", () => {
     expect(body).toContain("<loc>");
   });
 
-  test("verificar que no hay recursos rotos (im\u00E1genes, scripts)", async ({ page }) => {
+  test("verificar que no hay recursos rotos (imágenes, scripts)", async ({ page }) => {
     const responses: string[] = [];
     page.on("response", (response) => {
       if (response.status() >= 400) {

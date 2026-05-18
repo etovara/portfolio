@@ -30,10 +30,17 @@ testing/
 │   ├── fixtures/
 │   │   └── test-data.ts       ← Datos de prueba centralizados
 │   └── playwright.config.ts   ← Configuración de Playwright
-└── manual/
-    ├── smoke-tests.md         ← Smoke tests manuales
-    ├── regression-tests.md    ← Pruebas de regresión manuales
-    └── exploratory-checklist.md ← Checklist de exploración
+├── manual/
+│   ├── smoke-tests.md         ← Smoke tests manuales (6)
+│   ├── regression-tests.md    ← Pruebas de regresión manuales (8)
+│   └── exploratory-checklist.md ← Checklist de exploración (~30 items)
+├── export/                    ← Exportación de casos de prueba
+│   ├── manual-test-cases.xls  ← 14 casos manuales en Excel
+│   ├── automation-test-cases.xls ← 37 casos automatizados en Excel
+│   ├── manual-test-cases.csv  ← 14 casos manuales en CSV
+│   └── automation-test-cases.csv ← 37 casos automatizados en CSV
+└── scripts/
+    └── export-test-cases.mjs  ← Generador de exportación
 ```
 
 ---
@@ -47,6 +54,7 @@ testing/
 | 🔍 Checklist Exploratorio | ~30 items | Visual, responsive, accesibilidad |
 | 🤖 Tests Automatizados (UI) | 30 | Navegación, secciones, i18n, formulario |
 | 🌐 Tests Automatizados (API) | 7 | HTTP status, sitemap, seguridad |
+| 📊 Casos exportados | 51 (14 manual + 37 auto) | Formato .xls / .csv |
 | **Total** | **~81 escenarios** | |
 
 ---

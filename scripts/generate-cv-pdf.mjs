@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 
 const data = JSON.parse(readFileSync(join(ROOT, "src", "data", "data.json"), "utf-8"));
-const { personal, experience, projects } = data;
+const { personal, experience, projects, education, certifications } = data;
 
 const PHOTO_PATH = join(ROOT, "public", "Edwin_Foto.jpeg");
 const PHOTO_B64 = readFileSync(PHOTO_PATH).toString("base64");
@@ -23,6 +23,7 @@ const labels = {
   en: {
     contact: "Contact",
     location: "Location",
+    phone: "Phone",
     skills: "Skills",
     languages: "Languages",
     native: "Native",
@@ -31,21 +32,26 @@ const labels = {
     experience: "Work Experience",
     projects: "Featured Projects",
     education: "Education",
+    certifications: "Certifications",
     techSkills: "Technical Skills",
     workExp: "Work Experience",
     technologies: "Technologies",
     spanNative: "Spanish: Native",
-    engProf: "English: Professional working proficiency",
-    eduDegree: "Computer Engineer",
-    eduField: "Computer Engineering",
+    engLevel: `English: ${personal.englishLevel}`,
     cvTitle: "Professional CV - Edwin Tovar",
     roleLabel: "Role",
     sidebarSkills: "Skills",
     projTitle: "Projects",
+    modality: "Mode",
+    availability: "Availability",
+    immediate: "Immediate",
+    workAuth: "Work Authorization",
+    links: "Links",
   },
   es: {
     contact: "Contacto",
-    location: "Ubicaci\u00f3n",
+    location: "Ubicación",
+    phone: "Teléfono",
     skills: "Habilidades",
     languages: "Idiomas",
     native: "Nativo",
@@ -53,18 +59,22 @@ const labels = {
     summary: "Resumen Profesional",
     experience: "Experiencia Laboral",
     projects: "Proyectos Destacados",
-    education: "Educaci\u00f3n",
-    techSkills: "Habilidades T\u00e9cnicas",
+    education: "Educación",
+    certifications: "Certificaciones",
+    techSkills: "Habilidades Técnicas",
     workExp: "Experiencia Laboral",
-    technologies: "Tecnolog\u00edas",
-    spanNative: "Espa\u00f1ol: Nativo",
-    engProf: "Ingl\u00e9s: Nivel profesional",
-    eduDegree: "Ingeniero Inform\u00e1tico",
-    eduField: "Ingenier\u00eda Inform\u00e1tica",
+    technologies: "Tecnologías",
+    spanNative: "Español: Nativo",
+    engLevel: `Inglés: ${personal.englishLevel}`,
     cvTitle: "CV Profesional - Edwin Tovar",
     roleLabel: "Rol",
     sidebarSkills: "Habilidades",
     projTitle: "Proyectos",
+    modality: "Modalidad",
+    availability: "Disponibilidad",
+    immediate: "Inmediata",
+    workAuth: "Autorización Laboral",
+    links: "Enlaces",
   },
 };
 
@@ -76,15 +86,20 @@ function expSection(p, lang) {
     <span class="exp-company">${p.company} &middot; ${p.period}</span>
   </div>
   <p>${p.description[lang]}</p>
+  <div class="exp-meta">${p.modality}</div>
   <div class="tech-tags">${p.technologies.map((t) => `<span class="tag">${t}</span>`).join("")}</div>
 </div>`;
 }
 
 function projSection(p, lang) {
+  const links = [];
+  if (p.url) links.push(`<a href="${p.url}">${p.url}</a>`);
+  if (p.github) links.push(`<a href="${p.github}">GitHub</a>`);
   return `
 <div class="proj-item">
   <h3>${p.title[lang]}</h3>
   <p>${p.description[lang]}</p>
+  ${links.length > 0 ? `<div class="proj-links">${links.join(" | ")}</div>` : ""}
   <div class="tech-tags">${p.technologies.map((t) => `<span class="tag">${t}</span>`).join("")}</div>
 </div>`;
 }
@@ -113,6 +128,9 @@ function professionalHTML(lang) {
   .sidebar .skill-list li::before { content: "\\25B8 "; color: #4a7cf7; }
   .sidebar .lang-item { font-size: 8.5pt; margin-bottom: 4px; color: #c8d4e8; }
   .sidebar .lang-item .level { color: #7a9cf5; font-size: 7.5pt; }
+  .sidebar .cert-list { list-style: none; }
+  .sidebar .cert-list li { font-size: 8pt; padding: 3px 0; color: #c8d4e8; border-bottom: 1px solid #2f4068; }
+  .sidebar .cert-list li:last-child { border-bottom: none; }
   .main { flex: 1; padding: 32px 36px; }
   .main .section-title { font-size: 11pt; text-transform: uppercase; letter-spacing: 1.5px; color: #1a2744; border-bottom: 2px solid #1a2744; padding-bottom: 4px; margin: 20px 0 12px; }
   .main .section-title:first-of-type { margin-top: 0; }
@@ -122,11 +140,18 @@ function professionalHTML(lang) {
   .exp-header h3 { font-size: 10.5pt; color: #1a2744; }
   .exp-company { font-size: 9pt; color: #4a7cf7; font-weight: 600; }
   .exp-item p { font-size: 9pt; text-align: justify; margin-bottom: 6px; }
+  .exp-meta { font-size: 8pt; color: #6b7280; margin-bottom: 6px; font-style: italic; }
   .tech-tags { display: flex; flex-wrap: wrap; gap: 4px; }
   .tag { font-size: 7.5pt; background: #e8ecf5; color: #1a2744; padding: 2px 8px; border-radius: 3px; }
   .proj-item { margin-bottom: 14px; page-break-inside: avoid; }
   .proj-item h3 { font-size: 10pt; color: #1a2744; }
   .proj-item p { font-size: 9pt; text-align: justify; margin-bottom: 6px; }
+  .proj-links { font-size: 8pt; margin-bottom: 4px; }
+  .proj-links a { color: #4a7cf7; text-decoration: none; }
+  .edu-item { margin-bottom: 8px; page-break-inside: avoid; }
+  .edu-item h3 { font-size: 10pt; color: #1a2744; }
+  .edu-item .edu-institution { font-size: 9pt; color: #4a7cf7; }
+  .edu-item .edu-period { font-size: 8.5pt; color: #6b7280; }
 </style>
 </head>
 <body>
@@ -137,14 +162,19 @@ function professionalHTML(lang) {
     <div class="role-sub">${personal.role[lang]}</div>
     <div class="section-title">${l.contact}</div>
     <div class="contact-item"><strong>Email</strong>${personal.email}</div>
+    <div class="contact-item"><strong>${l.phone}</strong>${personal.phone}</div>
     <div class="contact-item"><strong>${l.location}</strong>${personal.location}</div>
+    <div class="contact-item"><strong>${l.availability}</strong>${personal.availability}</div>
     <div class="contact-item"><strong>LinkedIn</strong>${personal.social.linkedin}</div>
     ${personal.social.github ? `<div class="contact-item"><strong>GitHub</strong>${personal.social.github}</div>` : ""}
     <div class="section-title">${l.sidebarSkills}</div>
-    <ul class="skill-list">${allTechs.slice(0, 20).map((t) => `<li>${t}</li>`).join("")}</ul>
+    <ul class="skill-list">${allTechs.slice(0, 25).map((t) => `<li>${t}</li>`).join("")}</ul>
+    ${certifications && certifications.length > 0 ? `
+    <div class="section-title">${l.certifications}</div>
+    <ul class="cert-list">${certifications.map((c) => `<li>${c.name}</li>`).join("")}</ul>` : ""}
     <div class="section-title">${l.languages}</div>
-    <div class="lang-item">Espa\u00f1ol <span class="level">${l.native}</span></div>
-    <div class="lang-item">Ingl\u00e9s <span class="level">${l.professional}</span></div>
+    <div class="lang-item">${l.spanNative}</div>
+    <div class="lang-item">${l.engLevel}</div>
   </div>
   <div class="main">
     <div class="section-title">${l.summary}</div>
@@ -154,9 +184,12 @@ function professionalHTML(lang) {
     <div class="section-title">${l.projects}</div>
     ${projects.map((p) => projSection(p, lang)).join("")}
     <div class="section-title">${l.education}</div>
-    <div class="exp-item">
-      <div class="exp-header"><h3>${l.eduDegree}</h3><span class="exp-company">${l.eduField}</span></div>
-    </div>
+    ${education.map((e) => `
+    <div class="edu-item">
+      <h3>${e.degree}</h3>
+      <div class="edu-institution">${e.institution}</div>
+      ${e.period ? `<div class="edu-period">${e.period}</div>` : ""}
+    </div>`).join("")}
   </div>
 </div>
 </body>
@@ -180,12 +213,13 @@ function atsHTML(lang) {
   .contact-line { font-size: 10pt; margin-bottom: 8px; }
   .company-line { font-weight: bold; }
   .period { font-style: italic; }
+  .modality { font-style: italic; font-size: 10pt; }
   .tech { font-size: 10pt; }
 </style>
 </head>
 <body>
 <h1>${personal.name}</h1>
-<p class="contact-line">${personal.role[lang]} | ${personal.location} | ${personal.email} | ${personal.social.linkedin}</p>
+<p class="contact-line">${personal.role[lang]} | ${personal.location} | ${personal.phone} | ${personal.email} | ${personal.social.linkedin}</p>
 
 <h2>${l.summary}</h2>
 <p>${personal.bio[lang]}</p>
@@ -197,6 +231,7 @@ function atsHTML(lang) {
 ${experience.map((p) => `
 <h3>${p.role[lang]}</h3>
 <p class="company-line">${p.company} &mdash; <span class="period">${p.period}</span></p>
+<p class="modality">${p.modality}</p>
 <p>${p.description[lang]}</p>
 <p class="tech">${l.technologies}: ${p.technologies.join(", ")}</p>
 `).join("")}
@@ -205,16 +240,22 @@ ${experience.map((p) => `
 ${projects.map((p) => `
 <h3>${p.title[lang]}</h3>
 <p>${p.description[lang]}</p>
+${p.github ? `<p>GitHub: ${p.github}</p>` : ""}
+${p.url ? `<p>URL: ${p.url}</p>` : ""}
 <p class="tech">${l.technologies}: ${p.technologies.join(", ")}</p>
 `).join("")}
 
 <h2>${l.education}</h2>
-<p><strong>${l.eduDegree}</strong> &mdash; ${l.eduField}</p>
+${education.map((e) => `<p><strong>${e.degree}</strong> &mdash; ${e.institution}${e.period ? ` (${e.period})` : ""}</p>`).join("")}
+
+${certifications && certifications.length > 0 ? `
+<h2>${l.certifications}</h2>
+<ul>${certifications.map((c) => `<li>${c.name}</li>`).join("")}</ul>` : ""}
 
 <h2>${l.languages}</h2>
 <ul>
   <li>${l.spanNative}</li>
-  <li>${l.engProf}</li>
+  <li>${l.engLevel}</li>
 </ul>
 </body>
 </html>`;
