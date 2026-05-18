@@ -38,5 +38,10 @@
   "lang": {
     "switch": "Switch language to Spanish",
     "current": "English"
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode",
+    "system": "System Mode"
   }
 }

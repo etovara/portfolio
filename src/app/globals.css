@@ -1,15 +1,12 @@
-/* === ESTILOS GLOBALES === */
-/* Importa Tailwind CSS v4 y define variables de tema claro/oscuro */
-
 @import "tailwindcss";
 
-/* Variables de color para el tema claro */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-/* Mapea las variables CSS a los tokens de Tailwind mediante @theme inline */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -17,28 +14,35 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Tema oscuro activado por preferencia del sistema operativo */
+:root.dark,
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
 
-/* Normalización básica de box-sizing */
 * {
   box-sizing: border-box;
 }
 
-/* Estilo personalizado para la selección de texto en modo claro */
 ::selection {
   background-color: #e2e8f0;
   color: #0a0a0a;
 }
 
-/* Estilo personalizado para la selección de texto en modo oscuro */
+.dark ::selection {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
 @media (prefers-color-scheme: dark) {
-  ::selection {
+  :root:not([data-theme="light"]) ::selection {
     background-color: #334155;
     color: #f1f5f9;
   }

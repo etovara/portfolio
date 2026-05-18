@@ -5,12 +5,14 @@
 
 import { useState } from "react";
 import { useLanguage } from "@/i18n";
+import { useTheme } from "@/i18n/ThemeContext";
 
 export default function Header() {
   /* Estado local para controlar la apertura/cierre del menú móvil */
   const [menuOpen, setMenuOpen] = useState(false);
   /* Hook de internacionalización: traducciones (t), idioma actual (lang), y alternar idioma (toggleLanguage) */
   const { t, lang, toggleLanguage } = useLanguage();
+  const { theme, hydrated, setTheme } = useTheme();
 
   /* Elementos de navegación: label traducido + hash al que apunta */
   const navItems = [
@@ -48,6 +50,41 @@ export default function Header() {
             aria-label={t.lang.switch}
           >
             {lang === "es" ? "EN" : "ES"}
+          </button>
+
+          {/* Botón toggle de tema: cicla Claro → Oscuro → Sistema → Claro */}
+          <button
+            onClick={() => {
+              const modes: Array<"light" | "dark" | "system"> = ["light", "dark", "system"];
+              const idx = modes.indexOf(theme);
+              setTheme(modes[(idx + 1) % modes.length]);
+            }}
+            className="rounded-md p-1.5 text-zinc-600 transition-colors hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
+            data-testid="theme-toggle"
+            aria-label={
+              !hydrated ? t.theme.system :
+              theme === "light" ? t.theme.dark :
+              theme === "dark" ? t.theme.system :
+              t.theme.light
+            }
+          >
+            {!hydrated ? (
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            ) : theme === "light" ? (
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            ) : theme === "dark" ? (
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            ) : (
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            )}
           </button>
 
           {/* Botón hamburguesa visible solo en móviles (md:hidden) */}
