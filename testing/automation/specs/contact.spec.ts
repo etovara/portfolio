@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { ContactSection } from "../pages";
 import { TEST_USERS } from "../fixtures/test-data";
 
-test.describe("Secci\u00F3n Contacto - POM", () => {
+test.describe("Sección Contacto - POM", () => {
   let contact: ContactSection;
 
   test.beforeEach(async ({ page }) => {
@@ -25,7 +25,7 @@ test.describe("Secci\u00F3n Contacto - POM", () => {
     await contact.assertVisible("contact-submit");
   });
 
-  test("al enviar el formulario debe mostrar mensaje de \u00E9xito", async () => {
+  test("al enviar el formulario debe mostrar mensaje de éxito", async () => {
     await contact.submitContactForm(
       TEST_USERS.valid.name,
       TEST_USERS.valid.email,
@@ -34,7 +34,7 @@ test.describe("Secci\u00F3n Contacto - POM", () => {
     await expect(await contact.getSuccessMessage()).toBeVisible();
   });
 
-  test("debe mostrar un enlace de correo electr\u00F3nico alternativo", async () => {
+  test("debe mostrar un enlace de correo electrónico alternativo", async () => {
     await expect(await contact.getEmailLink()).toBeVisible();
   });
 });

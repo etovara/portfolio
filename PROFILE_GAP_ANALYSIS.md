@@ -1,41 +1,25 @@
 # Análisis de Brechas — Perfil Profesional Edwin Tovar
 
-> Generado el 17/05/2026. Pendiente de completar.
+> **Última actualización:** 18/05/2026 — Sesión de trabajo finalizada.
 
-## 🔴 Críticas (afectan directamente la contratación)
+## ✅ Resuelto
 
-| Sección | Campo faltante | Impacto |
-|---|---|---|
-| Experiencia | Logros clave con métricas cuantificables en TODAS las experiencias | Alto — descripciones actuales son responsabilidades, no logros |
-| Certificaciones | Totalmente vacío | Alto — Senior sin certificaciones visibles resta peso |
-| Idiomas | Nivel de inglés sin especificar (B2, C1, C2) | Alto — portfolio bilingüe, reclutador necesita nivel exacto |
-| Educación | Institución y período de la carrera vacíos | Medio-alto — "Computer Engineer" sin saber dónde ni cuándo |
-| Logros | Sin métricas concretas | Alto — ningún porcentaje, número o impacto medible |
+- **Educación** — 3 instituciones: Universidad "Alejandro de Humboldt" (Ing. Informática 2012-2016), I.U.T. "Antonio José de Sucre", CBTECH
+- **Certificaciones** — 4 agregadas: Gestión Ágil/Lean, TestProject, Desarrollo Web, Postman/API
+- **Teléfono** — +54 (911) 26455051
+- **Modalidad laboral** — Remoto/Presencial en las 5 experiencias
+- **Bio/Extracto** — Actualizada con descripción detallada
+- **Autorización laboral** — CABA, Argentina
+- **Disponibilidad** — Inmediata
+- **GitHub / Portafolio web** — https://github.com/etovara
+- **Proyecto portfolio** — Repo en GitHub con URL pública desplegada
 
-## 🟡 Moderadas (mejoran competitividad)
+## 🔴 Pendiente para próxima sesión
 
-| Sección | Campo faltante |
-|---|---|
-| Experiencia | Tipo de contratación y modalidad (remoto/híbrido/presencial) en las 5 experiencias |
-| Experiencia | Equipo a cargo (personas lideradas/mentoreadas) en las 5 experiencias |
-| Personal | Autorización laboral (visa, ciudadano) — clave para roles internacionales |
-| Personal | Disponibilidad (inmediata, 15 días, 30 días) |
-| Skills | Faltan herramientas: GitHub Actions, Jenkins, Docker, SAFe |
-| Soft Skills | Liderazgo técnico sin ejemplo — siendo Senior es crítico mostrar mentoring |
-
-## 🟢 Leves (complementan)
-
-| Sección | Campo faltante |
-|---|---|
-| Personal | GitHub / Portafolio web, teléfono, rango salarial |
-| Proyectos | Links (URL/GitHub) vacíos en los 4 proyectos |
-| Preferencias | Tipo de rol, tamaño de empresa, disponibilidad para viajar |
-| Referencias | Totalmente vacío |
-
-## 🎯 Prioridad de acción sugerida
-
-1. Nivel de inglés
-2. Institución y período de educación
-3. Certificaciones (ISTQB, etc.)
-4. Logros cuantificables en experiencia
-5. Modalidad y equipo a cargo por experiencia
+1. **Logros cuantificables** — Agregar métricas a cada experiencia (% reducción bugs, cobertura, tiempos, etc.)
+2. **URLs de proyectos 1-4** — Completar sitios y repositorios de proyectos individuales
+3. **Equipo a cargo** — Personas lideradas/mentoreadas por experiencia
+4. **Skills faltantes** — GitHub Actions, Jenkins, Docker, SAFe
+5. **Nivel de inglés** — Pendiente certificación formal (actual: técnico)
+6. **Preferencias** — Tipo de rol, disponibilidad para viajar
+7. **Referencias** — Totalmente vacío

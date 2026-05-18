@@ -34,19 +34,13 @@ Biografía:
 
 [[Escribe 3-5 líneas sobre ti: quién eres, qué haces, cuántos años de
 experiencia tienes, en qué industrias has trabajado y cuál es tu
-especialidad. Mira el ejemplo:]]
-
-Ejemplo:
-Senior QA Engineer specialized in quality assurance for Fintech, Banking,
-and Payment platforms. Expert in end-to-end testing — from requirements
-analysis through automation, execution, and reporting.
+especialidad.]]
 
 Ubicación:          [[Ej: Buenos Aires, Argentina]]
 Email:              [[ejemplo@correo.com]]
 URL de LinkedIn:    [[https://linkedin.com/in/tuusuario]]
 URL de GitHub:      [[https://github.com/tuusuario  (opcional)]]
 URL de Twitter/X:   [[https://twitter.com/tuusuario  (opcional)]]
-URL de tu sitio:    [[https://tudominio.com  (opcional)]]
 ```
 
 ### Tu experiencia laboral (agrega tantas como necesites)
@@ -57,14 +51,7 @@ Empresa:           [[Ej: SOFI]]
 Rol:               [[Ej: Senior QA Engineer]]
 Período:           [[Ej: 2023 — Presente]]
 Descripción:
-
-[[Describe brevemente qué hacías:]]
-
-Ejemplo:
-Plan and execute manual and automated testing for Fintech platforms.
-Implement AI-driven testing solutions and integrate testing suites
-into CI/CD pipelines.
-
+[[Describe brevemente qué hacías y tecnologías usadas]]
 Tecnologías usadas: [[Ej: Selenium, Postman, AWS, MongoDB]]
 
 ── Experiencia 2 ──
@@ -73,45 +60,17 @@ Rol:               [[ ]]
 Período:           [[ ]]
 Descripción:       [[ ]]
 Tecnologías usadas: [[ ]]
-
-── Experiencia 3 ──
-Empresa:           [[ ]]
-Rol:               [[ ]]
-Período:           [[ ]]
-Descripción:       [[ ]]
-Tecnologías usadas: [[ ]]
 ```
 
-### Tus proyectos destacados (agrega tantos como necesites)
+### Tus proyectos destacados
 
 ```
 ── Proyecto 1 ──
 Título:            [[Ej: AI-Driven Test Automation Suite]]
-Descripción:
-
-[[Explica qué hace el proyecto y qué tecnologías usaste:]]
-
-Ejemplo:
-Implemented AI-powered testing solutions using Testim.io and Mabl
-for intelligent script creation and maintenance.
-
+Descripción:       [[Explica qué hace y tecnologías usadas]]
 Tecnologías:       [[Ej: Testim.io, Mabl, Selenium, ChatGPT]]
-URL del proyecto:  [[https://...  (opcional)]]
-URL del código:    [[https://github.com/...  (opcional)]]
-
-── Proyecto 2 ──
-Título:            [[ ]]
-Descripción:       [[ ]]
-Tecnologías:       [[ ]]
-URL del proyecto:  [[ ]]
-URL del código:    [[ ]]
-
-── Proyecto 3 ──
-Título:            [[ ]]
-Descripción:       [[ ]]
-Tecnologías:       [[ ]]
-URL del proyecto:  [[ ]]
-URL del código:    [[ ]]
+URL del proyecto:  [[https://... (opcional)]]
+URL del código:    [[https://github.com/... (opcional)]]
 ```
 
 ### Preferencias del sitio
@@ -127,9 +86,7 @@ Dominio web:          [[https://tudominio.com]]
 
 ## ✅ Lista de verificación — Antes de pegar esto en la IA
 
-- [ ] Completé mi nombre
-- [ ] Completé mi rol profesional
-- [ ] Completé mi biografía
+- [ ] Completé mi nombre, rol y biografía
 - [ ] Completé mi ubicación y email
 - [ ] Completé al menos 1 experiencia laboral
 - [ ] Completé al menos 1 proyecto
@@ -139,11 +96,9 @@ Dominio web:          [[https://tudominio.com]]
 
 ## 🎯 ¿Qué va a hacer la IA con esta información?
 
-La IA va a construir automáticamente:
-
 | Característica | Descripción |
 |---|---|
-| 🌐 **Página web** | Una página profesional tipo "landing page" |
+| 🌐 **Página web** | Página profesional tipo "landing page" |
 | 📱 **Responsive** | Se ve bien en celular, tablet y computadora |
 | 🌙 **Modo oscuro** | Se adapta automáticamente al tema del sistema |
 | 🌎 **Dos idiomas** | Botón para cambiar entre español e inglés |
@@ -163,39 +118,33 @@ La IA va a construir automáticamente:
 - Internacionalización manual con React Context (ES/EN)
 - Atributos `data-testid` en todos los elementos interactivos
 - Una sola ruta `/` con navegación por anclas (`#about`, `#experience`, etc.)
-- Sitemap generado dinámicamente en `src/app/sitemap.ts`
-- La IA debe generar el archivo `ARCHITECTURE.md` documentando la arquitectura
+- Sitemap dinámico en `src/app/sitemap.ts`
+- Exportar casos de prueba a testing/export/
 
 ---
 
 ## 🚀 Después de que la IA genere el código
 
-1. La IA te dará instrucciones para ejecutar estos comandos en tu computadora:
+```bash
+npm run dev      # Ver tu portafolio en vivo
+npm run build    # Build de producción
+npm run lint     # Revisar errores
+npm run test:e2e # Ejecutar tests E2E
+```
 
-   ```bash
-   npm run dev      # Para ver tu portafolio en vivo
-   npm run build    # Para prepararlo para publicación
-   npm run lint     # Para revisar que no haya errores
-   ```
-
-2. Para publicarlo en internet (gratis):
-
-   - Crea una cuenta en **Vercel** (vercel.com) o **Netlify** (netlify.com)
-   - Conecta tu repositorio de GitHub
-   - La IA te guiará con los pasos exactos
+Para publicarlo en internet (gratis):
+- Crea cuenta en **Vercel** (vercel.com) o configura **GitHub Pages**
+- Conecta tu repositorio de GitHub
+- Sigue los pasos en `.github/workflows/deploy-pages.yml`
 
 ---
 
 ## ❓ Preguntas frecuentes
 
-**¿Necesito saber programar?**
-No. La IA hace todo. Solo debes llenar el formulario de arriba y seguir las instrucciones.
+**¿Necesito saber programar?** No. La IA hace todo.
 
-**¿Cuánto tarda?**
-La IA genera el código en segundos. Luego sigue sus pasos para ponerlo en línea.
+**¿Cuánto tarda?** La IA genera el código en segundos.
 
-**¿Puedo cambiar los colores?**
-Sí, puedes pedirle a la IA que cambie cualquier cosa después.
+**¿Puedo cambiar los colores?** Sí, pídele a la IA.
 
-**¿Puedo agregar más secciones?**
-Sí. Solo dile a la IA: "agrega una sección de [lo que quieras]".
+**¿Puedo agregar más secciones?** Sí, solo dile a la IA.

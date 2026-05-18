@@ -1,17 +1,17 @@
 {
   "nav": {
-    "about": "Sobre m\u00ED",
+    "about": "Sobre mí",
     "experience": "Experiencia",
     "projects": "Proyectos",
     "contact": "Contacto"
   },
   "hero": {
     "cta_projects": "Ver mi trabajo",
-    "cta_contact": "Cont\u00E1ctame",
+    "cta_contact": "Contáctame",
     "cta_cv": "Descargar CV"
   },
   "about": {
-    "heading": "Sobre M\u00ED"
+    "heading": "Sobre Mí"
   },
   "experience": {
     "heading": "Experiencia"
@@ -19,24 +19,24 @@
   "projects": {
     "heading": "Proyectos",
     "live": "Sitio",
-    "source": "C\u00F3digo"
+    "source": "Código"
   },
   "contact": {
     "heading": "Contacto",
-    "subtitle": "\u00BFTienes un proyecto en mente? Env\u00EDame un mensaje y te responder\u00E9 a la brevedad.",
+    "subtitle": "¿Tienes un proyecto en mente? Envíame un mensaje y te responderé a la brevedad.",
     "label_name": "Nombre",
     "label_email": "Email",
     "label_message": "Mensaje",
     "submit": "Enviar mensaje",
-    "or_email": "O env\u00EDame un correo directamente a",
-    "success": "\u00A1Gracias por tu mensaje! Te responder\u00E9 pronto."
+    "or_email": "O envíame un correo directamente a",
+    "success": "¡Gracias por tu mensaje! Te responderé pronto."
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
     "back_to_top": "Volver arriba"
   },
   "lang": {
-    "switch": "Cambiar idioma a ingl\u00E9s",
-    "current": "Espa\u00F1ol"
+    "switch": "Cambiar idioma a inglés",
+    "current": "Español"
   }
 }

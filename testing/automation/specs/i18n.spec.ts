@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { HomePage, AboutSection } from "../pages";
 import { EXPECTED_ES, EXPECTED_EN } from "../fixtures/test-data";
 
-test.describe("Internacionalizaci\u00F3n (i18n) - POM", () => {
+test.describe("Internacionalización (i18n) - POM", () => {
   let home: HomePage;
   let about: AboutSection;
 
@@ -12,7 +12,7 @@ test.describe("Internacionalizaci\u00F3n (i18n) - POM", () => {
     await home.goto();
   });
 
-  test("el idioma predeterminado debe ser espa\u00F1ol", async ({ page }) => {
+  test("el idioma predeterminado debe ser español", async ({ page }) => {
     const sections = [
       { testId: "about-heading", expected: EXPECTED_ES.headings.about },
       { testId: "experience-heading", expected: EXPECTED_ES.headings.experience },
@@ -24,7 +24,7 @@ test.describe("Internacionalizaci\u00F3n (i18n) - POM", () => {
     }
   });
 
-  test("al cambiar a ingl\u00E9s los textos deben actualizarse", async ({ page }) => {
+  test("al cambiar a inglés los textos deben actualizarse", async ({ page }) => {
     await home.clickLangToggle();
     const sections = [
       { testId: "about-heading", expected: EXPECTED_EN.headings.about },
@@ -37,7 +37,7 @@ test.describe("Internacionalizaci\u00F3n (i18n) - POM", () => {
     }
   });
 
-  test("despu\u00E9s de alternar, el bot\u00F3n de idioma debe reflejar el cambio", async () => {
+  test("después de alternar, el botón de idioma debe reflejar el cambio", async () => {
     expect(await home.getText("lang-toggle")).toBe("EN");
     await home.clickLangToggle();
     expect(await home.getText("lang-toggle")).toBe("ES");

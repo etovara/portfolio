@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { ExperienceSection } from "../pages";
 
-test.describe("Secci\u00F3n Experiencia - POM", () => {
+test.describe("Sección Experiencia - POM", () => {
   let experience: ExperienceSection;
 
   test.beforeEach(async ({ page }) => {
@@ -18,7 +18,7 @@ test.describe("Secci\u00F3n Experiencia - POM", () => {
     expect(count).toBeGreaterThan(0);
   });
 
-  test("cada experiencia debe tener empresa, rol, per\u00EDodo y tecnolog\u00EDas", async () => {
+  test("cada experiencia debe tener empresa, rol, período y tecnologías", async () => {
     const ids = await experience.getItemIds();
     for (const id of ids) {
       await experience.assertVisible(`experience-role-${id}`);

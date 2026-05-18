@@ -12,7 +12,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 /* Extrae y tipa las secciones del archivo JSON de datos centralizado */
-const { personal, experience, projects } = data as PortfolioData;
+const { personal, experience, projects, education, certifications } = data as PortfolioData;
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
       <main>
         {/* Cada componente recibe únicamente los props que necesita (inversión de dependencias) */}
         <Hero personal={personal} />
-        <About personal={personal} />
+        <About personal={personal} education={education} certifications={certifications} />
         <Experience experience={experience} />
         <Projects projects={projects} />
         <Contact email={personal.email} />
