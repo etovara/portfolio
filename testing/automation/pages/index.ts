@@ -1,7 +1,0 @@
-export { HomePage } from "./HomePage";
-export { HeroSection } from "./HeroSection";
-export { AboutSection } from "./AboutSection";
-export { ExperienceSection } from "./ExperienceSection";
-export { ProjectsSection } from "./ProjectsSection";
-export { ContactSection } from "./ContactSection";
-export { FooterSection } from "./FooterSection";
