@@ -19,11 +19,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-/* Metadatos SEO: título y descripción para motores de búsqueda */
+/* Configuración de Metadatos SEO */
 export const metadata: Metadata = {
-  title: "Edwin Tovar | QA Engineer",
+  title: "Edwin Tovar | Software Engineer",
   description:
-    "Portfolio of Edwin Tovar — Senior QA Engineer specialized in Manual & Automation Testing and AI-Driven Quality Assurance.",
+    "Portfolio profesional de Edwin Tovar, Desarrollador de Software especializado en Frontend y Calidad.",
 };
 
 /* Script inline que se ejecuta antes de hidratación para aplicar el tema sin flash */
